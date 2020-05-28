@@ -1,0 +1,20 @@
+PODS:
+  - PagingCollectionViewLayout (0.0.4)
+  - XLPagerTabStrip (9.0.0)
+
+DEPENDENCIES:
+  - PagingCollectionViewLayout
+  - XLPagerTabStrip
+
+SPEC REPOS:
+  trunk:
+    - PagingCollectionViewLayout
+    - XLPagerTabStrip
+
+SPEC CHECKSUMS:
+  PagingCollectionViewLayout: a75339d9fe45affc116b6770f37c884a8a5e9cd9
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
+
+PODFILE CHECKSUM: 46fcf2b3478f7d66d53fa0ebdc79f860828486af
+
+COCOAPODS: 1.9.1

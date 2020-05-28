@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "home24Px.png",
+      "scale" : "1x",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "home24Px@2x.png",
+      "scale" : "2x",
+      "idiom" : "universal"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "home24Px@3x.png",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
