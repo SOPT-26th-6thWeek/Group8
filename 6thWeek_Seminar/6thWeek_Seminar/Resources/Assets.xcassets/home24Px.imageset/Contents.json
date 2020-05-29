@@ -1,18 +1,18 @@
 {
   "images" : [
     {
-      "filename" : "home24Px.png",
       "scale" : "1x",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "home24Px.png"
     },
     {
       "filename" : "home24Px@2x.png",
-      "scale" : "2x",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "scale" : "2x"
     },
     {
-      "idiom" : "universal",
       "filename" : "home24Px@3x.png",
+      "idiom" : "universal",
       "scale" : "3x"
     }
   ],

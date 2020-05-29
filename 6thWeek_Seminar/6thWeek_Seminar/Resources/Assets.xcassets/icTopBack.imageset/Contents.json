@@ -7,13 +7,13 @@
     },
     {
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "icTopBack@2x.png"
+      "filename" : "icTopBack@2x.png",
+      "scale" : "2x"
     },
     {
       "scale" : "3x",
-      "idiom" : "universal",
-      "filename" : "icTopBack@3x.png"
+      "filename" : "icTopBack@3x.png",
+      "idiom" : "universal"
     }
   ],
   "info" : {

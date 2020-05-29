@@ -7,12 +7,12 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "icContentsShoppingbag@2x.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "icContentsShoppingbag@2x.png"
     },
     {
-      "idiom" : "universal",
       "filename" : "icContentsShoppingbag@3x.png",
+      "idiom" : "universal",
       "scale" : "3x"
     }
   ],

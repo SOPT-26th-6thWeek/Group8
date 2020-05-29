@@ -1,19 +1,19 @@
 {
   "images" : [
     {
+      "filename" : "shoppingbagUnselected.png",
       "scale" : "1x",
-      "idiom" : "universal",
-      "filename" : "shoppingbagUnselected.png"
+      "idiom" : "universal"
     },
     {
       "filename" : "shoppingbagUnselected@2x.png",
-      "scale" : "2x",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "scale" : "2x"
     },
     {
+      "idiom" : "universal",
       "filename" : "shoppingbagUnselected@3x.png",
-      "scale" : "3x",
-      "idiom" : "universal"
+      "scale" : "3x"
     }
   ],
   "info" : {

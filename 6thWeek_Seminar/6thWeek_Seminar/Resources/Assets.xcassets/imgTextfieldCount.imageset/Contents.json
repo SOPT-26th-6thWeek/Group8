@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "imgTextfieldCount.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "imgTextfieldCount.png"
     },
     {
-      "idiom" : "universal",
       "filename" : "imgTextfieldCount@2x.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "idiom" : "universal"
     },
     {
-      "scale" : "3x",
       "idiom" : "universal",
+      "scale" : "3x",
       "filename" : "imgTextfieldCount@3x.png"
     }
   ],

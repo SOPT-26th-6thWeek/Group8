@@ -1,9 +1,9 @@
 {
   "images" : [
     {
-      "filename" : "icListPoint.png",
       "scale" : "1x",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "icListPoint.png"
     },
     {
       "idiom" : "universal",
@@ -11,9 +11,9 @@
       "scale" : "2x"
     },
     {
-      "scale" : "3x",
       "idiom" : "universal",
-      "filename" : "icListPoint@3x.png"
+      "filename" : "icListPoint@3x.png",
+      "scale" : "3x"
     }
   ],
   "info" : {
