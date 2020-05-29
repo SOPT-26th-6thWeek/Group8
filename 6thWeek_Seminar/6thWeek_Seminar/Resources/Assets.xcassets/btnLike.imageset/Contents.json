@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+<<<<<<< HEAD
       "scale" : "1x",
       "filename" : "btnLike.png",
       "idiom" : "universal"
@@ -14,6 +15,21 @@
       "scale" : "3x",
       "filename" : "btnLike@3x.png",
       "idiom" : "universal"
+=======
+      "idiom" : "universal",
+      "filename" : "btnLike.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "btnLike@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "scale" : "3x",
+      "idiom" : "universal",
+      "filename" : "btnLike@3x.png"
+>>>>>>> 1f187425f3380723eaf382988cbd964d3ef6b7d8
     }
   ],
   "info" : {

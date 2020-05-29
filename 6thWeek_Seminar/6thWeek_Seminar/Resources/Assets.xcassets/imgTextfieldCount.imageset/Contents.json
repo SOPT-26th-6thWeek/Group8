@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+<<<<<<< HEAD
       "idiom" : "universal",
       "filename" : "imgTextfieldCount.png",
       "scale" : "1x"
@@ -14,6 +15,21 @@
       "scale" : "3x",
       "idiom" : "universal",
       "filename" : "imgTextfieldCount@3x.png"
+=======
+      "filename" : "imgTextfieldCount.png",
+      "scale" : "1x",
+      "idiom" : "universal"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x",
+      "filename" : "imgTextfieldCount@2x.png"
+    },
+    {
+      "filename" : "imgTextfieldCount@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+>>>>>>> 1f187425f3380723eaf382988cbd964d3ef6b7d8
     }
   ],
   "info" : {

@@ -6,6 +6,7 @@
       "scale" : "1x"
     },
     {
+<<<<<<< HEAD
       "idiom" : "universal",
       "filename" : "imgLineProduct@2x.png",
       "scale" : "2x"
@@ -14,6 +15,16 @@
       "idiom" : "universal",
       "scale" : "3x",
       "filename" : "imgLineProduct@3x.png"
+=======
+      "filename" : "imgLineProduct@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "imgLineProduct@3x.png",
+      "scale" : "3x",
+      "idiom" : "universal"
+>>>>>>> 1f187425f3380723eaf382988cbd964d3ef6b7d8
     }
   ],
   "info" : {

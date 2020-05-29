@@ -2,6 +2,7 @@
   "images" : [
     {
       "filename" : "icTopSearch.png",
+<<<<<<< HEAD
       "scale" : "1x",
       "idiom" : "universal"
     },
@@ -13,6 +14,19 @@
     {
       "idiom" : "universal",
       "filename" : "icTopSearch@3x.png",
+=======
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "scale" : "2x",
+      "filename" : "icTopSearch@2x.png",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "icTopSearch@3x.png",
+      "idiom" : "universal",
+>>>>>>> 1f187425f3380723eaf382988cbd964d3ef6b7d8
       "scale" : "3x"
     }
   ],

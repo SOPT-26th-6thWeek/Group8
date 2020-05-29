@@ -1,4 +1,5 @@
 PODS:
+<<<<<<< HEAD
   - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
@@ -12,5 +13,38 @@ SPEC CHECKSUMS:
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
 PODFILE CHECKSUM: 591dbd16986006ca23babe250c2f45299351f3a3
+=======
+  - Alamofire (4.8.2)
+  - BEMCheckBox (1.4.1)
+  - iOSDropDown (0.3.4)
+  - Kingfisher (5.12.0):
+    - Kingfisher/Core (= 5.12.0)
+  - Kingfisher/Core (5.12.0)
+  - XLPagerTabStrip (9.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.8.2)
+  - BEMCheckBox
+  - iOSDropDown
+  - Kingfisher (~> 5.0)
+  - XLPagerTabStrip (~> 9.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - BEMCheckBox
+    - iOSDropDown
+    - Kingfisher
+    - XLPagerTabStrip
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
+  iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
+  Kingfisher: dc6e0f53bb5b12c3e75bedb0e01bbd7a640eea69
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
+
+PODFILE CHECKSUM: 79e80f08677a20e0a29c9ea32da97eec3a2cdfcf
+>>>>>>> 1f187425f3380723eaf382988cbd964d3ef6b7d8
 
 COCOAPODS: 1.9.1

@@ -2,6 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
+<<<<<<< HEAD
       "scale" : "1x",
       "filename" : "imgDivider.png"
     },
@@ -14,6 +15,20 @@
       "idiom" : "universal",
       "filename" : "imgDivider@3x.png",
       "scale" : "3x"
+=======
+      "filename" : "imgDivider.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x",
+      "filename" : "imgDivider@2x.png"
+    },
+    {
+      "scale" : "3x",
+      "filename" : "imgDivider@3x.png",
+      "idiom" : "universal"
+>>>>>>> 1f187425f3380723eaf382988cbd964d3ef6b7d8
     }
   ],
   "info" : {
