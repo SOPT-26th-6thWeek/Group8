@@ -10,6 +10,7 @@ target '6thWeek_Seminar' do
 	pod 'Kingfisher', '~> 5.0'
 	pod 'XLPagerTabStrip', '~> 9.0'
 	pod 'BEMCheckBox'
+	pod 'iOSDropDown'
   target '6thWeek_SeminarTests' do
     inherit! :search_paths
     # Pods for testing

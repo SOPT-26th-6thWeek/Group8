@@ -21,6 +21,6 @@ class childViewController2: UIViewController, IndicatorInfoProvider{
     }
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "child2")
+        return IndicatorInfo(title: "해외배송")
     }
 }

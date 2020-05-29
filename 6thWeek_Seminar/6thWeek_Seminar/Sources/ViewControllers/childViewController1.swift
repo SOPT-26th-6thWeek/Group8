@@ -8,6 +8,7 @@
 
 import UIKit
 import XLPagerTabStrip
+import iOSDropDown
 
 class childViewController1: UIViewController, IndicatorInfoProvider{
 
@@ -43,42 +44,21 @@ class childViewController1: UIViewController, IndicatorInfoProvider{
     }
     
     private func setItemInformations(){
-        let item1 = ItemInfo(itemlabel: "클리어런스 마켓비")
-        let item2 = ItemInfo(itemlabel: "마켓비 NASRI 러그 시리즈")
-        ItemInformations = [item1, item2]
+        let item1 = ItemInfo(itemlabel: "GUBURI LED 단스탠드 레드", point: "1,500원", cost: "50,700")
+        let item2 = ItemInfo(itemlabel: "마켓비 NASRI 러그 시리즈", point: "300원", cost: "11,900")
+        let item3 = ItemInfo(itemlabel: "EZBO HERO 캐비넷 시리즈", point: "8,000원", cost: "269,000")
+        let item4 = ItemInfo(itemlabel: "EZBO HEPO 캐비넷 협탁", point: "2,800", cost: "95,900")
+        ItemInformations = [item1,item2,item3,item4]
         
     }
      
     
 }
 
-/*func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-       let label = UILabel()
-       label.text = "국내배송"
-       label.backgroundColor = UIColor.lightGray
-       return label
-   }
-  func numberOfSections(in tableView: UITableView) -> Int {
-       return 2
-   }
-   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return 5
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "sample"
-       return cell
-    }*/
 
 extension childViewController1: UITableViewDataSource{
     
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let label = UILabel()
-        label.text = "국내배송"
-        label.backgroundColor = UIColor.lightGray
-        return label
-    }
+
     //func numberOfSections(in tableView: UITableView) -> Int {
     //    return 2
     //}
@@ -88,7 +68,7 @@ extension childViewController1: UITableViewDataSource{
    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cartItemCell = tableView.dequeueReusableCell(withIdentifier: ItemCell.identfier, for: indexPath) as? ItemCell else{ return UITableViewCell()}
-        cartItemCell.setItemInfo(itemname: ItemInformations[indexPath.row].itemname)
+        cartItemCell.setItemInfo(itemname: ItemInformations[indexPath.row].itemname, itempoint: ItemInformations[indexPath.row].itempoint, itemcost: ItemInformations[indexPath.row].itemcost)
         return cartItemCell
     }
     

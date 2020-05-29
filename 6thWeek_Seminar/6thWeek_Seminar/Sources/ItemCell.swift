@@ -14,6 +14,8 @@ class ItemCell: UITableViewCell {
     
     @IBOutlet weak var itemImageView: UIImageView!
     @IBOutlet weak var itemName: UILabel!
+    @IBOutlet weak var point: UILabel!
+    @IBOutlet weak var cost: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,10 +28,12 @@ class ItemCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setItemInfo(itemname: String){
+    func setItemInfo(itemname: String, itempoint: String, itemcost: String){
         
         itemImageView.image = UIImage(named: itemname)
         itemName.text = itemname
+        point.text = itempoint
+        cost.text = itemcost
     }
 
 }

@@ -24,6 +24,7 @@
 		B8939380247D08A700A4AB28 /* home_yeseul.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B893937F247D08A700A4AB28 /* home_yeseul.storyboard */; };
 		F25290AE2480BA2E00027E29 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25290AD2480BA2E00027E29 /* ItemCell.swift */; };
 		F25290B02480BC7800027E29 /* ItemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25290AF2480BC7800027E29 /* ItemInfo.swift */; };
+		F25290B224810CA600027E29 /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F25290B124810CA600027E29 /* iOSDropDown.framework */; };
 		F2AB27C9247FBAB80036AD84 /* childViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AB27C8247FBAB80036AD84 /* childViewController1.swift */; };
 		F2AB27CB247FBAC20036AD84 /* childViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AB27CA247FBAC20036AD84 /* childViewController2.swift */; };
 /* End PBXBuildFile section */
@@ -75,6 +76,7 @@
 		D949F725F0F58942CD4C0BED /* Pods-6thWeek_Seminar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6thWeek_Seminar.release.xcconfig"; path = "Target Support Files/Pods-6thWeek_Seminar/Pods-6thWeek_Seminar.release.xcconfig"; sourceTree = "<group>"; };
 		F25290AD2480BA2E00027E29 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemCell.swift; path = 6thWeek_Seminar/Sources/ItemCell.swift; sourceTree = SOURCE_ROOT; };
 		F25290AF2480BC7800027E29 /* ItemInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfo.swift; sourceTree = "<group>"; };
+		F25290B124810CA600027E29 /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2AB27C8247FBAB80036AD84 /* childViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = childViewController1.swift; sourceTree = "<group>"; };
 		F2AB27CA247FBAC20036AD84 /* childViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = childViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F25290B224810CA600027E29 /* iOSDropDown.framework in Frameworks */,
 				A1A8298DDC49983735D916E3 /* Pods_6thWeek_Seminar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +126,7 @@
 		96453E949FA3AA6DE460D1C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F25290B124810CA600027E29 /* iOSDropDown.framework */,
 				9022A2F7CD391499468FDB48 /* Pods_6thWeek_Seminar.framework */,
 				6686F3CBE38A24307CB514B1 /* Pods_6thWeek_Seminar_6thWeek_SeminarUITests.framework */,
 				17FDF42A3767B3868E988AE6 /* Pods_6thWeek_SeminarTests.framework */,

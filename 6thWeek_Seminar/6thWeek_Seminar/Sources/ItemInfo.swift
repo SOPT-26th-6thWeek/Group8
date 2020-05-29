@@ -12,11 +12,15 @@ struct ItemInfo{
     
     var itemname: String
     var itemimage: UIImage?
+    var itempoint: String
+    var itemcost: String
     
-    init(itemlabel: String){
+    init(itemlabel: String, point: String, cost: String){
         
         self.itemimage = UIImage(named: itemlabel)
         self.itemname = itemlabel
+        self.itempoint = point
+        self.itemcost = cost
     }
     
     
