@@ -15,6 +15,13 @@ private func setBannerList(){
     let banner2 = Banner(imgName: "imgLamp")
     bannerList=[banner1,banner2]
 }
+
+private var contentList:[Content]=[]
+private func setContentList(){
+    let content1 = Content(productName: "KADEDO 의자 티크", productImageName: "imgChair", productInfo: "평범한 나의 일상 속 작은 포인트,<KADEDO 의자>는 원목으로 이루어져 당신의 평범한 공간에 따뜻하고 부드러운 생기를 줄 수 있습니다", discount: "3%", price: "93,000원")
+    let content2 = Content(productName: "SIDON 원목가구", productImageName: "imgWoodfurniture", productInfo: "내 집에도 카페 테이블이? <SIDON 원목가구>는 집에서 카페 분위기를 낼 수 있습니다. 당신의 집에서 홈카페를 즐겨보세요.", discount: "5%", price: "449,000원")
+    contentList = [content1,content2]
+}
 class HomeYSViewController: UIViewController {
     
     
@@ -26,6 +33,7 @@ class HomeYSViewController: UIViewController {
         super.viewDidLoad()
         
         setBannerList()
+        setContentList()
         imgCollectionView.delegate = self
         imgCollectionView.dataSource = self
         homeTableView.delegate = self
@@ -41,10 +49,10 @@ class HomeYSViewController: UIViewController {
         let logoImageName = "imgLogo"
         let titleLogo = UIImageView()
         titleLogo.image = UIImage(named:logoImageName)
+        self.navigationItem.titleView = titleLogo
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationItem.titleView = titleLogo
         
     }
 
@@ -89,21 +97,25 @@ extension HomeYSViewController :UICollectionViewDelegateFlowLayout{
 }
 extension HomeYSViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return contentList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let contentCell = tableView.dequeueReusableCell(withIdentifier: ContentCell.identifier, for: indexPath) as? ContentCell else{return UITableViewCell()}
+        contentCell.set(productName: contentList[indexPath.row].productName, productImgName: contentList[indexPath.row].productImageName, productInfo: contentList[indexPath.row].productInfo, dcLabel_: contentList[indexPath.row].discount
+            , priceLabel: contentList[indexPath.row].price, divideLine: contentList[indexPath.row].divideLine,marketB:contentList[indexPath.row].marketB)
+        
+        return contentCell
     }
     
 //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 //        <#code#>
 //    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 593
-    }
+    
 }
 
 extension HomeYSViewController:UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 593
+    }
 }
