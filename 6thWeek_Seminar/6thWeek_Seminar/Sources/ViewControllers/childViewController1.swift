@@ -47,7 +47,7 @@ class childViewController1: UIViewController, IndicatorInfoProvider{
         let item1 = ItemInfo(itemlabel: "GUBURI LED 단스탠드 레드", point: "1,500원", cost: "50,700")
         let item2 = ItemInfo(itemlabel: "마켓비 NASRI 러그 시리즈", point: "300원", cost: "11,900")
         let item3 = ItemInfo(itemlabel: "EZBO HERO 캐비넷 시리즈", point: "8,000원", cost: "269,000")
-        let item4 = ItemInfo(itemlabel: "EZBO HEPO 캐비넷 협탁", point: "2,800", cost: "95,900")
+        let item4 = ItemInfo(itemlabel: "EZBO HEPO 캐비넷 협탁", point: "2,800원", cost: "95,900")
         ItemInformations = [item1,item2,item3,item4]
         
     }
