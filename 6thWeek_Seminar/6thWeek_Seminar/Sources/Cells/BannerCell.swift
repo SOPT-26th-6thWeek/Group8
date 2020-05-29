@@ -8,8 +8,8 @@
 
 import UIKit
 
-class imgCollectionViewCell: UICollectionViewCell {
-    static let identifier :String = "ImgCell"
+class BannerCell: UICollectionViewCell {
+    static let identifier :String = "BannerCell"
     @IBOutlet weak var bannerImg: UIImageView!
     func set(_ imgInfo:Banner){
         bannerImg.image = imgInfo.bannerImage

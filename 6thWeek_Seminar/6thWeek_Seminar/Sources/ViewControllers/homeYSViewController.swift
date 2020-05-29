@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PagingCollectionViewLayout
+
 
 private var bannerList:[Banner]=[]
 private func setBannerList(){
@@ -16,18 +16,37 @@ private func setBannerList(){
     bannerList=[banner1,banner2]
 }
 class HomeYSViewController: UIViewController {
+    
+    
     @IBOutlet weak var imgCollectionView: UICollectionView!
     //let layout = PagingCollectionViewLayout()
-
+    
+    @IBOutlet weak var homeTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setBannerList()
         imgCollectionView.delegate = self
         imgCollectionView.dataSource = self
-
+        homeTableView.delegate = self
+        homeTableView.dataSource = self
+        
+        //네비게이션바 설정
+        setNavBar()
+        
+        
         // Do any additional setup after loading the view.
     }
-    
+    func setNavBar(){
+        let logoImageName = "imgLogo"
+        let titleLogo = UIImageView()
+        titleLogo.image = UIImage(named:logoImageName)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationItem.titleView = titleLogo
+        
+    }
 
     /*
     // MARK: - Navigation
@@ -45,7 +64,7 @@ extension HomeYSViewController: UICollectionViewDataSource{
         return bannerList.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let bannerCell = collectionView.dequeueReusableCell(withReuseIdentifier: imgCollectionViewCell.identifier, for: indexPath) as? imgCollectionViewCell else {return UICollectionViewCell()}
+        guard let bannerCell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerCell.identifier, for: indexPath) as? BannerCell else {return UICollectionViewCell()}
         bannerCell.set(bannerList[indexPath.row])
         return bannerCell
         
@@ -67,4 +86,24 @@ extension HomeYSViewController :UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+}
+extension HomeYSViewController:UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        <#code#>
+//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 593
+    }
+}
+
+extension HomeYSViewController:UITableViewDelegate{
+    
 }
