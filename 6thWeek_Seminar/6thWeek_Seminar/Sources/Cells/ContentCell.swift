@@ -11,9 +11,19 @@ import UIKit
 class ContentCell: UITableViewCell {
     @IBOutlet weak var productImg: UIImageView!
     @IBOutlet weak var productName: UILabel!
+    @IBOutlet weak var like: UIButton!
+    var buttonActive = false
+    
     @IBAction func likeButton(_ sender: Any) {
+        if buttonActive {
+            like.setImage(UIImage(named: "favorite24Px"), for: .normal)
+        } else {
+            like.setImage(UIImage(named: "loveAndRomance"), for: .normal)
+        }
+        buttonActive = !buttonActive
     }
-    @IBOutlet weak var productInfo: UITextField!
+ 
+    @IBOutlet weak var productInfoTV: UITextView!
     @IBOutlet weak var divideLine: UIImageView!
     @IBOutlet weak var marketBLabel: UILabel!
     @IBOutlet weak var subProductName: UILabel!
@@ -25,7 +35,7 @@ class ContentCell: UITableViewCell {
     func set(productName:String,productImgName:String,productInfo:String,dcLabel_:String,priceLabel:String,divideLine:String,marketB:String){
         self.productName.text = productName
         self.productImg.image = UIImage(named:productImgName)
-        self.productInfo.text = productInfo
+        self.productInfoTV.text = productInfo
         self.dcLabel.text = dcLabel_
         self.priceLabel.text = priceLabel
         self.subProductName.text = productName
