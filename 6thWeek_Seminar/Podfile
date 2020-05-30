@@ -7,7 +7,7 @@ target '6thWeek_Seminar' do
 
   # Pods for 6thWeek_Seminar
   pod 'XLPagerTabStrip'
-
+  pod 'BEMCheckBox'
   target '6thWeek_SeminarTests' do
     inherit! :search_paths
     # Pods for testing

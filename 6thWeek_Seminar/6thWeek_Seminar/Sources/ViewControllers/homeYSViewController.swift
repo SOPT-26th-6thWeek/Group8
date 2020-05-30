@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import XLPagerTabStrip
 
 private var bannerList:[Banner]=[]
 private func setBannerList(){
@@ -18,8 +18,8 @@ private func setBannerList(){
 
 private var contentList:[Content]=[]
 private func setContentList(){
-    let content1 = Content(productName: "KADEDO 의자 티크", productImageName: "imgChair", productInfo: "평범한 나의 일상 속 작은 포인트,<KADEDO 의자>는 원목으로 이루어져 당신의 평범한 공간에 따뜻하고 부드러운 생기를 줄 수 있습니다", discount: "3%", price: "93,000원")
-    let content2 = Content(productName: "SIDON 원목가구", productImageName: "imgWoodfurniture", productInfo: "내 집에도 카페 테이블이? <SIDON 원목가구>는 집에서 카페 분위기를 낼 수 있습니다. 당신의 집에서 홈카페를 즐겨보세요.", discount: "5%", price: "449,000원")
+    let content1 = Content(productName: "KADEDO 의자 티크", productImageName: "imgChair", productInfo: "평범한 나의 일상 속 작은 포인트,\n<KADEDO 의자>는 원목으로 이루어져 \n당신의 평범한 공간에 따뜻하고 부드러운 \n생기를 줄 수 있습니다", discount: "3%", price: "93,000원")
+    let content2 = Content(productName: "SIDON 원목가구", productImageName: "imgWoodfurniture", productInfo: "내 집에도 카페 테이블이? \n<SIDON 원목가구>는 집에서 카페 분위기를 \n낼 수 있습니다. \n당신의 집에서 홈카페를 즐겨보세요.", discount: "5%", price: "449,000원")
     contentList = [content1,content2]
 }
 class HomeYSViewController: UIViewController {
@@ -45,6 +45,31 @@ class HomeYSViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    @IBOutlet weak var topCart: UIBarButtonItem!
+    @IBOutlet weak var topSearch: UIBarButtonItem!
+    @IBAction func topSearchAction(_ sender: Any) {
+    }
+    @IBAction func topCartAction(_ sender: Any) {
+    }
+    @IBAction func leftPage(_ sender: Any) {
+        //
+        let visibleItems: NSArray = imgCollectionView.indexPathsForVisibleItems as NSArray
+        let currentItem: IndexPath = visibleItems.object(at: 0) as! IndexPath
+        let nextItem: IndexPath = IndexPath(item: currentItem.item - 1, section: 0)
+        if nextItem.row < bannerList.count && nextItem.row >= 0{
+            imgCollectionView.scrollToItem(at: nextItem, at: .right, animated: true)
+
+        }
+    }
+    @IBAction func rightPage(_ sender: Any) {
+        let visibleItems: NSArray = imgCollectionView.indexPathsForVisibleItems as NSArray
+        let currentItem: IndexPath = visibleItems.object(at: 0) as! IndexPath
+        let nextItem: IndexPath = IndexPath(item: currentItem.item + 1, section: 0)
+               if nextItem.row < bannerList.count {
+            imgCollectionView.scrollToItem(at: nextItem, at: .left, animated: true)
+
+        }
+    }
     func setNavBar(){
         let logoImageName = "imgLogo"
         let titleLogo = UIImageView()
@@ -52,7 +77,9 @@ class HomeYSViewController: UIViewController {
         self.navigationItem.titleView = titleLogo
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+        self.topCart.width = 30
+        self.topSearch.width = 30
         
     }
 
@@ -116,6 +143,6 @@ extension HomeYSViewController:UITableViewDataSource{
 
 extension HomeYSViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 593
+        return 594
     }
 }
