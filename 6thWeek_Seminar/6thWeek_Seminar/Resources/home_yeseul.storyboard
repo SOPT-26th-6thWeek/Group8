@@ -197,9 +197,6 @@
                                                         <constraint firstAttribute="height" constant="40" id="hrs-et-EnH"/>
                                                     </constraints>
                                                     <state key="normal" title="Button" image="icContentsShoppingbag"/>
-                                                    <connections>
-                                                        <action selector="cartButton:" destination="Qjm-qx-wOs" eventType="touchUpInside" id="VSz-8z-4VT"/>
-                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bx8-l1-fiO" userLabel="subProductName">
                                                     <rect key="frame" x="124" y="776" width="129" height="24"/>
@@ -295,6 +292,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cartButton" destination="lme-bp-A2S" id="xb6-mw-FRL"/>
                                             <outlet property="dcLabel" destination="l86-IR-qXA" id="mBU-Cz-5zm"/>
                                             <outlet property="divideLine" destination="9gz-Kr-qQF" id="k4R-b2-fWB"/>
                                             <outlet property="like" destination="5Ux-iL-4BG" id="gdv-fx-BfF"/>
@@ -321,15 +319,11 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="pBD-tp-Noc">
                         <rightBarButtonItems>
-                            <barButtonItem title="TopShopping" image="icTopShoppingbag" width="48" id="0bH-I2-Ds0">
-                                <connections>
-                                    <action selector="topCartAction:" destination="dJG-Rv-Gz8" id="wHi-mt-hu5"/>
-                                </connections>
+                            <barButtonItem title="Item" image="icTopShoppingbag" width="48" id="z3n-Vf-lGT">
+                                <inset key="imageInsets" minX="20" minY="0.0" maxX="-20" maxY="0.0"/>
                             </barButtonItem>
-                            <barButtonItem title="TopSearch" image="icTopSearch" id="1kB-Ry-nen">
-                                <connections>
-                                    <action selector="topSearchAction:" destination="dJG-Rv-Gz8" id="pLY-ll-tf7"/>
-                                </connections>
+                            <barButtonItem title="Item" image="icTopSearch" width="48" style="plain" id="NyD-tZ-QaB">
+                                <inset key="imageInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -337,8 +331,6 @@
                     <connections>
                         <outlet property="homeTableView" destination="UPB-S5-MtU" id="6xS-yV-mBY"/>
                         <outlet property="imgCollectionView" destination="HB0-Qe-TwA" id="jQx-gw-rsv"/>
-                        <outlet property="topCart" destination="0bH-I2-Ds0" id="tob-KX-mvN"/>
-                        <outlet property="topSearch" destination="1kB-Ry-nen" id="PR6-eO-jjI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgd-4c-Snh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
