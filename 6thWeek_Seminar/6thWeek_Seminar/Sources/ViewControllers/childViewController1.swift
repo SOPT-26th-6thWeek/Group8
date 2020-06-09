@@ -8,7 +8,11 @@
 
 import UIKit
 import XLPagerTabStrip
+<<<<<<< HEAD
 //import iOSDropDown
+=======
+import iOSDropDown
+>>>>>>> 1f187425f3380723eaf382988cbd964d3ef6b7d8
 
 class childViewController1: UIViewController, IndicatorInfoProvider{
 

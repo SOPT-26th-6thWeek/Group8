@@ -6,8 +6,16 @@ target '6thWeek_Seminar' do
   use_frameworks!
 
   # Pods for 6thWeek_Seminar
+<<<<<<< HEAD
   pod 'XLPagerTabStrip'
   pod 'BEMCheckBox'
+=======
+	pod 'Alamofire', '~> 4.8.2'
+	pod 'Kingfisher', '~> 5.0'
+	pod 'XLPagerTabStrip', '~> 9.0'
+	pod 'BEMCheckBox'
+	pod 'iOSDropDown'
+>>>>>>> 1f187425f3380723eaf382988cbd964d3ef6b7d8
   target '6thWeek_SeminarTests' do
     inherit! :search_paths
     # Pods for testing
