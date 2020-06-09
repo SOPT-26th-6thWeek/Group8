@@ -1,13 +1,13 @@
 {
   "images" : [
     {
-      "scale" : "1x",
       "filename" : "10.png",
+      "scale" : "1x",
       "idiom" : "universal"
     },
     {
-      "filename" : "10@2x.png",
       "idiom" : "universal",
+      "filename" : "10@2x.png",
       "scale" : "2x"
     },
     {

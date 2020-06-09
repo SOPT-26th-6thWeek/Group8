@@ -1,9 +1,9 @@
 {
   "images" : [
     {
-      "scale" : "1x",
       "idiom" : "universal",
-      "filename" : "btnBuy.png"
+      "filename" : "btnBuy.png",
+      "scale" : "1x"
     },
     {
       "scale" : "2x",
