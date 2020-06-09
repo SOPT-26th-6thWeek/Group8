@@ -476,7 +476,7 @@
         <!--Child View Controller2-->
         <scene sceneID="Ylz-eD-PTG">
             <objects>
-                <viewController storyboardIdentifier="child2" id="2RQ-Ri-fKd" customClass="childViewController2" customModule="_thWeek_Seminar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="child02" id="2RQ-Ri-fKd" customClass="childViewController2" customModule="_thWeek_Seminar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hqE-oS-m9E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
