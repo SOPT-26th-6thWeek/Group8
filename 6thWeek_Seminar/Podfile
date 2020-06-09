@@ -10,6 +10,7 @@ target '6thWeek_Seminar' do
   pod 'BEMCheckBox'
   pod 'Alamofire'
   pod 'Kingfisher'
+  pod 'DropDown'
   target '6thWeek_SeminarTests' do
     inherit! :search_paths
     # Pods for testing
