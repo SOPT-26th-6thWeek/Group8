@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.1.0)
   - BEMCheckBox (1.4.1)
+  - DropDown (2.3.13)
   - Kingfisher (5.14.0):
     - Kingfisher/Core (= 5.14.0)
   - Kingfisher/Core (5.14.0)
@@ -9,6 +10,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - BEMCheckBox
+  - DropDown
   - Kingfisher
   - XLPagerTabStrip
 
@@ -16,15 +18,17 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - BEMCheckBox
+    - DropDown
     - Kingfisher
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
   BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   Kingfisher: 7b64389a43139c903ec434788344c288217c792d
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 5c19e0c0a6aa4048d086ae48aa1bffd9752d0a16
+PODFILE CHECKSUM: f7aead1b642c7b5e3eca87fa9c7e21daa207458e
 
 COCOAPODS: 1.9.1
