@@ -87,6 +87,7 @@ class HomeYSViewController: UIViewController {
         topSearch.width = 10
         self.navigationItem.setRightBarButtonItems([topSearch,topCart], animated: false)
         
+        
     }
     @objc func cartAction(_ sender : Any){
         let cartAlert = UIAlertController(title:"",message:"장바구니에 상품이 담겼습니다",preferredStyle:.alert)
@@ -165,5 +166,9 @@ extension HomeYSViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 594
     }
-    
+
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        
+//    }
 }
+
