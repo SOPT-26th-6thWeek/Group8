@@ -2,18 +2,15 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "imgDivideLine.png",
       "scale" : "1x"
     },
     {
-      "idiom" : "universal",
-      "filename" : "imgDivideLine@2x.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "idiom" : "universal"
     },
     {
-      "scale" : "3x",
-      "filename" : "imgDivideLine@3x.png",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {

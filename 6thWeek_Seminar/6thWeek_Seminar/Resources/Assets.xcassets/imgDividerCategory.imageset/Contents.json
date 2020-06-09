@@ -6,13 +6,13 @@
       "scale" : "1x"
     },
     {
-      "filename" : "imgDividerCategory@2x.png",
       "scale" : "2x",
+      "filename" : "imgDividerCategory@2x.png",
       "idiom" : "universal"
     },
     {
-      "idiom" : "universal",
       "scale" : "3x",
+      "idiom" : "universal",
       "filename" : "imgDividerCategory@3x.png"
     }
   ],

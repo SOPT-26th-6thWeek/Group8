@@ -1,9 +1,9 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "imgDivider.png"
+      "filename" : "imgDivider.png",
+      "idiom" : "universal"
     },
     {
       "filename" : "imgDivider@2x.png",
@@ -11,9 +11,9 @@
       "idiom" : "universal"
     },
     {
+      "scale" : "3x",
       "idiom" : "universal",
-      "filename" : "imgDivider@3x.png",
-      "scale" : "3x"
+      "filename" : "imgDivider@3x.png"
     }
   ],
   "info" : {

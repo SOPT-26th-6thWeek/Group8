@@ -1,19 +1,16 @@
 {
   "images" : [
     {
-      "filename" : "search24Px.png",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "filename" : "search24Px@2x.png",
-      "scale" : "2x",
+      "scale" : "1x",
       "idiom" : "universal"
     },
     {
-      "scale" : "3x",
       "idiom" : "universal",
-      "filename" : "search24Px@3x.png"
+      "scale" : "2x"
+    },
+    {
+      "scale" : "3x",
+      "idiom" : "universal"
     }
   ],
   "info" : {

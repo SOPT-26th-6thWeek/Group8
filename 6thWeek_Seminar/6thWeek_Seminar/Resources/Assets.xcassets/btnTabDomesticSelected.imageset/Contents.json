@@ -1,9 +1,9 @@
 {
   "images" : [
     {
-      "filename" : "btnTabDomesticSelected.png",
+      "scale" : "1x",
       "idiom" : "universal",
-      "scale" : "1x"
+      "filename" : "btnTabDomesticSelected.png"
     },
     {
       "scale" : "2x",

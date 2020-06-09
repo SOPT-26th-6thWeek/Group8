@@ -1,19 +1,16 @@
 {
   "images" : [
     {
-      "filename" : "imgBlackFillter.png",
       "scale" : "1x",
       "idiom" : "universal"
     },
     {
-      "idiom" : "universal",
-      "filename" : "imgBlackFillter@2x.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "idiom" : "universal"
     },
     {
       "scale" : "3x",
-      "idiom" : "universal",
-      "filename" : "imgBlackFillter@3x.png"
+      "idiom" : "universal"
     }
   ],
   "info" : {

@@ -1,9 +1,9 @@
 {
   "images" : [
     {
-      "scale" : "1x",
       "idiom" : "universal",
-      "filename" : "imgCheckbboxSelect.png"
+      "filename" : "imgCheckbboxSelect.png",
+      "scale" : "1x"
     },
     {
       "filename" : "imgCheckbboxSelect@2x.png",
@@ -12,8 +12,8 @@
     },
     {
       "scale" : "3x",
-      "filename" : "imgCheckbboxSelect@3x.png",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "imgCheckbboxSelect@3x.png"
     }
   ],
   "info" : {
