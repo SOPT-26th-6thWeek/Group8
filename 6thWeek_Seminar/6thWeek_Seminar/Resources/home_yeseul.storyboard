@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MZz-6x-GIK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MZz-6x-GIK">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -197,9 +197,6 @@
                                                         <constraint firstAttribute="height" constant="40" id="hrs-et-EnH"/>
                                                     </constraints>
                                                     <state key="normal" title="Button" image="icContentsShoppingbag"/>
-                                                    <connections>
-                                                        <action selector="cartButton:" destination="Qjm-qx-wOs" eventType="touchUpInside" id="VSz-8z-4VT"/>
-                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bx8-l1-fiO" userLabel="subProductName">
                                                     <rect key="frame" x="124" y="776" width="129" height="24"/>
@@ -227,7 +224,7 @@
                                                         <constraint firstAttribute="height" constant="1" id="Zfj-DL-k44"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XJp-l1-cfx">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJp-l1-cfx">
                                                     <rect key="frame" x="42" y="676" width="307" height="84"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
@@ -235,7 +232,7 @@
                                                     </constraints>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ux-iL-4BG" userLabel="likeButton">
@@ -295,6 +292,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cartButton" destination="lme-bp-A2S" id="xb6-mw-FRL"/>
                                             <outlet property="dcLabel" destination="l86-IR-qXA" id="mBU-Cz-5zm"/>
                                             <outlet property="divideLine" destination="9gz-Kr-qQF" id="k4R-b2-fWB"/>
                                             <outlet property="like" destination="5Ux-iL-4BG" id="gdv-fx-BfF"/>
@@ -319,26 +317,11 @@
                         <viewLayoutGuide key="safeArea" id="SKT-VM-7bk"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="pBD-tp-Noc">
-                        <rightBarButtonItems>
-                            <barButtonItem title="TopShopping" image="icTopShoppingbag" width="48" id="0bH-I2-Ds0">
-                                <connections>
-                                    <action selector="topCartAction:" destination="dJG-Rv-Gz8" id="wHi-mt-hu5"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="TopSearch" image="icTopSearch" id="1kB-Ry-nen">
-                                <connections>
-                                    <action selector="topSearchAction:" destination="dJG-Rv-Gz8" id="pLY-ll-tf7"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="pBD-tp-Noc"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="homeTableView" destination="UPB-S5-MtU" id="6xS-yV-mBY"/>
                         <outlet property="imgCollectionView" destination="HB0-Qe-TwA" id="jQx-gw-rsv"/>
-                        <outlet property="topCart" destination="0bH-I2-Ds0" id="tob-KX-mvN"/>
-                        <outlet property="topSearch" destination="1kB-Ry-nen" id="PR6-eO-jjI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgd-4c-Snh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -429,8 +412,6 @@
         <image name="icRightArrow" width="70" height="70"/>
         <image name="icTabHome" width="70" height="58"/>
         <image name="icTabSearch" width="70" height="58"/>
-        <image name="icTopSearch" width="48" height="48"/>
-        <image name="icTopShoppingbag" width="48" height="48"/>
         <image name="imgBlackFillter" width="375" height="508"/>
         <image name="loveAndRomance" width="17" height="17"/>
     </resources>

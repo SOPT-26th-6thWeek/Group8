@@ -2,15 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "home24Px.png",
       "scale" : "1x"
     },
     {
+      "filename" : "home24Px@2x.png",
       "scale" : "2x",
       "idiom" : "universal"
     },
     {
-      "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "home24Px@3x.png",
+      "idiom" : "universal"
     }
   ],
   "info" : {

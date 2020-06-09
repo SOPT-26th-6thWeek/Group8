@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ContentCell: UITableViewCell {
+
+
+class ContentCell: UITableViewCell{
     @IBOutlet weak var productImg: UIImageView!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var like: UIButton!
@@ -16,9 +18,9 @@ class ContentCell: UITableViewCell {
     
     @IBAction func likeButton(_ sender: Any) {
         if buttonActive {
-            like.setImage(UIImage(named: "favorite24Px"), for: .normal)
-        } else {
             like.setImage(UIImage(named: "loveAndRomance"), for: .normal)
+        } else {
+            like.setImage(UIImage(named: "favorite24Px"), for: .normal)
         }
         buttonActive = !buttonActive
     }
@@ -27,7 +29,11 @@ class ContentCell: UITableViewCell {
     @IBOutlet weak var divideLine: UIImageView!
     @IBOutlet weak var marketBLabel: UILabel!
     @IBOutlet weak var subProductName: UILabel!
-    @IBAction func cartButton(_ sender: Any) {
+    
+    @IBOutlet weak var cartButton: UIButton!
+    @objc func cartAction(_ sender : Any){
+        let cartAlert = UIAlertController(title:"",message:"장바구니에 상품이 담겼습니다",preferredStyle:.alert)
+        cartAlert.addAction(UIAlertAction(title:"확인",style:.default))
     }
     @IBOutlet weak var dcLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!

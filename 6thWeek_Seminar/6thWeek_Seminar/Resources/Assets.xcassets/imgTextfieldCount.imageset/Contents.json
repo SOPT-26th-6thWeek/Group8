@@ -6,13 +6,13 @@
       "scale" : "1x"
     },
     {
-      "idiom" : "universal",
+      "scale" : "2x",
       "filename" : "imgTextfieldCount@2x.png",
-      "scale" : "2x"
+      "idiom" : "universal"
     },
     {
-      "idiom" : "universal",
       "scale" : "3x",
+      "idiom" : "universal",
       "filename" : "imgTextfieldCount@3x.png"
     }
   ],

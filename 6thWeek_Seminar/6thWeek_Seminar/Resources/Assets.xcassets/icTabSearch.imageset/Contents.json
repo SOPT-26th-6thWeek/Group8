@@ -1,16 +1,19 @@
 {
   "images" : [
     {
-      "scale" : "1x",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "icTabSearch.png",
+      "scale" : "1x"
     },
     {
-      "idiom" : "universal",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "icTabSearch@2x.png",
+      "idiom" : "universal"
     },
     {
       "scale" : "3x",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "icTabSearch@3x.png"
     }
   ],
   "info" : {

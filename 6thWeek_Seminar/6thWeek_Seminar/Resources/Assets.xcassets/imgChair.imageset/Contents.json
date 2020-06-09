@@ -2,14 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "imgChair.png",
       "scale" : "1x"
     },
     {
       "scale" : "2x",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "imgChair@2x.png"
     },
     {
       "scale" : "3x",
+      "filename" : "imgChair@3x.png",
       "idiom" : "universal"
     }
   ],

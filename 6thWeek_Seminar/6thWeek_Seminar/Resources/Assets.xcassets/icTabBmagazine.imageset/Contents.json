@@ -2,15 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "icTabBmagazine.png",
       "scale" : "1x"
     },
     {
+      "filename" : "icTabBmagazine@2x.png",
       "scale" : "2x",
       "idiom" : "universal"
     },
     {
+      "scale" : "3x",
       "idiom" : "universal",
-      "scale" : "3x"
+      "filename" : "icTabBmagazine@3x.png"
     }
   ],
   "info" : {

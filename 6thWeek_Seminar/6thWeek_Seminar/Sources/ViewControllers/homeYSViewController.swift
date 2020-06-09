@@ -38,15 +38,15 @@ class HomeYSViewController: UIViewController {
         imgCollectionView.dataSource = self
         homeTableView.delegate = self
         homeTableView.dataSource = self
-        
+    
         //네비게이션바 설정
         setNavBar()
         
         
         // Do any additional setup after loading the view.
     }
-    @IBOutlet weak var topCart: UIBarButtonItem!
-    @IBOutlet weak var topSearch: UIBarButtonItem!
+//    @IBOutlet weak var topCart: UIBarButtonItem!
+//    @IBOutlet weak var topSearch: UIBarButtonItem!
     @IBAction func topSearchAction(_ sender: Any) {
     }
     @IBAction func topCartAction(_ sender: Any) {
@@ -74,15 +74,33 @@ class HomeYSViewController: UIViewController {
         let logoImageName = "imgLogo"
         let titleLogo = UIImageView()
         titleLogo.image = UIImage(named:logoImageName)
+        titleLogo.frame = CGRect(x: 0,y: 0,width: 130,height: 28)
+        let topSearch = UIBarButtonItem(image:UIImage(named:"icTopSearch"),style: UIBarButtonItem.Style.plain,target:nil,action:nil)
+
+        let topCart = UIBarButtonItem(image:UIImage(named:"icTopShoppingbag"),style: UIBarButtonItem.Style.plain,target:nil,action:nil)
+    
         self.navigationItem.titleView = titleLogo
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.backgroundColor = UIColor.clear
-        self.topCart.width = 30
-        self.topSearch.width = 30
+        topCart.width = 10
+        topSearch.width = 10
+        self.navigationItem.setRightBarButtonItems([topSearch,topCart], animated: false)
         
     }
-
+    @objc func cartAction(_ sender : Any){
+        let cartAlert = UIAlertController(title:"",message:"장바구니에 상품이 담겼습니다",preferredStyle:.alert)
+        cartAlert.addAction(UIAlertAction(title:"확인",style:.default))
+        self.present(cartAlert,animated:true)
+        
+    }
+//    @IBAction func cartAlert(_ sender: Any) {
+//        let cartAlert = UIAlertController(title:"",message:"장바구니에 상품이 담겼습니다",preferredStyle:.alert)
+//        cartAlert.addAction(UIAlertAction(title:"확인",style:.default))
+//        //홈뷰컨에서 alert present 하는 법?
+//        self.present(cartAlert,animated:true)
+//    }
+//    
     /*
     // MARK: - Navigation
 
@@ -131,6 +149,8 @@ extension HomeYSViewController:UITableViewDataSource{
         guard let contentCell = tableView.dequeueReusableCell(withIdentifier: ContentCell.identifier, for: indexPath) as? ContentCell else{return UITableViewCell()}
         contentCell.set(productName: contentList[indexPath.row].productName, productImgName: contentList[indexPath.row].productImageName, productInfo: contentList[indexPath.row].productInfo, dcLabel_: contentList[indexPath.row].discount
             , priceLabel: contentList[indexPath.row].price, divideLine: contentList[indexPath.row].divideLine,marketB:contentList[indexPath.row].marketB)
+        contentCell.cartButton.addTarget(self, action: #selector(cartAction(_:)), for: .touchUpInside)
+        //contentCell.cartButton
         
         return contentCell
     }
@@ -145,4 +165,5 @@ extension HomeYSViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 594
     }
+    
 }
