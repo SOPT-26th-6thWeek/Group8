@@ -75,22 +75,18 @@ class HomeYSViewController: UIViewController {
         let titleLogo = UIImageView()
         titleLogo.image = UIImage(named:logoImageName)
         titleLogo.frame = CGRect(x: 0,y: 0,width: 130,height: 28)
-//        let topSearch = UIBarButtonItem()
-//        topSearch.image = UIImage(named:"icTopSearch")
-//
-//        topSearch.width = 48
-//
-//        let topCart = UIBarButtonItem()
-//        topCart.image = UIImage(named:"icTopShoppingbag")
-//        topCart.width = 48
+        let topSearch = UIBarButtonItem(image:UIImage(named:"icTopSearch"),style: UIBarButtonItem.Style.plain,target:nil,action:nil)
+
+        let topCart = UIBarButtonItem(image:UIImage(named:"icTopShoppingbag"),style: UIBarButtonItem.Style.plain,target:nil,action:nil)
     
         self.navigationItem.titleView = titleLogo
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.backgroundColor = UIColor.clear
-//        self.navigationItem.setRightBarButtonItems([topSearch,topCart], animated: false)
-//        self.topCart.width = 10
-//        self.topSearch.width = 10
+        topCart.width = 10
+        topSearch.width = 10
+        self.navigationItem.setRightBarButtonItems([topSearch,topCart], animated: false)
+        
     }
     @objc func cartAction(_ sender : Any){
         let cartAlert = UIAlertController(title:"",message:"장바구니에 상품이 담겼습니다",preferredStyle:.alert)

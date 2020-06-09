@@ -317,16 +317,7 @@
                         <viewLayoutGuide key="safeArea" id="SKT-VM-7bk"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="pBD-tp-Noc">
-                        <rightBarButtonItems>
-                            <barButtonItem title="Item" image="icTopShoppingbag" width="48" id="z3n-Vf-lGT">
-                                <inset key="imageInsets" minX="20" minY="0.0" maxX="-20" maxY="0.0"/>
-                            </barButtonItem>
-                            <barButtonItem title="Item" image="icTopSearch" width="48" style="plain" id="NyD-tZ-QaB">
-                                <inset key="imageInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            </barButtonItem>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="pBD-tp-Noc"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="homeTableView" destination="UPB-S5-MtU" id="6xS-yV-mBY"/>
@@ -421,8 +412,6 @@
         <image name="icRightArrow" width="70" height="70"/>
         <image name="icTabHome" width="70" height="58"/>
         <image name="icTabSearch" width="70" height="58"/>
-        <image name="icTopSearch" width="48" height="48"/>
-        <image name="icTopShoppingbag" width="48" height="48"/>
         <image name="imgBlackFillter" width="375" height="508"/>
         <image name="loveAndRomance" width="17" height="17"/>
     </resources>
