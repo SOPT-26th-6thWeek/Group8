@@ -1,0 +1,6 @@
+framework module Pods_6thWeek_Seminar_6thWeek_SeminarUITests {
+  umbrella header "Pods-6thWeek_Seminar-6thWeek_SeminarUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
