@@ -6,28 +6,28 @@
 //  Copyright © 2020 이예슬. All rights reserved.
 //
 
-struct SigininData: Codable {
+struct shoppingbagData: Codable {
     var status: Int
     var success: Bool
     var message: String
-    var data: TokenData?
-    
-    enum CodingKeys: String, CodingKey {
-        case status = "status"
-        case success = "success"
-        case message = "message"
-        case data = "data"
-    }
-    
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        status = (try? values.decode(Int.self, forKey: .status)) ?? -1
-        success = (try? values.decode(Bool.self, forKey: .success)) ?? false
-        message = (try? values.decode(String.self, forKey: .message)) ?? ""
-        data = (try? values.decode(TokenData.self, forKey: .data)) ?? nil
-    }
+    var data: DataClass?
+
 }
 
-struct TokenData: Codable {
-    var jwt: String
+struct DataClass: Codable {
+    let result1, result2: [Result]
+}
+
+struct Result: Codable {
+    let productIdx: Int
+    let img:String
+    let name: String
+    let deliveryCharge, savings, price, quantity: Int
+    let option: [String]
+
+    enum CodingKeys: String, CodingKey {
+        case productIdx, img, name
+        case deliveryCharge = "delivery_charge"
+        case savings, price, quantity, option
+    }
 }

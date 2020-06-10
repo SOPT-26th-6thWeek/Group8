@@ -39,6 +39,7 @@
 		B893937D247D068B00A4AB28 /* home_siyeon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B893937C247D068B00A4AB28 /* home_siyeon.storyboard */; };
 		B8939380247D08A700A4AB28 /* home_yeseul.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B893937F247D08A700A4AB28 /* home_yeseul.storyboard */; };
 		B8B39AAE2482435900E3E2A2 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B39AAD2482435900E3E2A2 /* ItemCell.swift */; };
+		F23281C42490BFEE00CD8F0B /* shoppingbagService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23281C32490BFEE00CD8F0B /* shoppingbagService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		B8B39AAD2482435900E3E2A2 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		CE27C2EEF02CDC7B881043D0 /* Pods-6thWeek_Seminar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6thWeek_Seminar.release.xcconfig"; path = "Target Support Files/Pods-6thWeek_Seminar/Pods-6thWeek_Seminar.release.xcconfig"; sourceTree = "<group>"; };
 		D3795B97BEFCB4CD6505AF04 /* Pods_6thWeek_Seminar_6thWeek_SeminarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_6thWeek_Seminar_6thWeek_SeminarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F23281C32490BFEE00CD8F0B /* shoppingbagService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoppingbagService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 				B82CB6D7248FFFB2002B0704 /* APIConstants.swift */,
 				B82CB6D6248FFFB2002B0704 /* NetworkResult.swift */,
 				B82CB6D8248FFFB2002B0704 /* shoppingbagData.swift */,
+				F23281C32490BFEE00CD8F0B /* shoppingbagService.swift */,
 				B819E139247FC50700424856 /* Cells */,
 				B8939379247D045100A4AB28 /* ViewControllers */,
 				B819E13A247FC66800424856 /* banner.swift */,
@@ -509,6 +512,7 @@
 				B82CB6E9248FFFED002B0704 /* ItemInfo.swift in Sources */,
 				B82CB6E2248FFFD3002B0704 /* SHH_child2ViewController.swift in Sources */,
 				B82CB6E5248FFFD3002B0704 /* ParentViewController.swift in Sources */,
+				F23281C42490BFEE00CD8F0B /* shoppingbagService.swift in Sources */,
 				B893934A247D035F00A4AB28 /* ViewController.swift in Sources */,
 				B8410FA82481225E00A7EB04 /* ContentCell.swift in Sources */,
 				B82CB6E7248FFFD3002B0704 /* MenuTabViewController.swift in Sources */,
