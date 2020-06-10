@@ -1,14 +1,14 @@
 {
   "images" : [
     {
-      "scale" : "1x",
+      "filename" : "icTopSearch.png",
       "idiom" : "universal",
-      "filename" : "icTopSearch.png"
+      "scale" : "1x"
     },
     {
       "filename" : "icTopSearch@2x.png",
-      "scale" : "2x",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "scale" : "2x"
     },
     {
       "filename" : "icTopSearch@3x.png",
@@ -17,7 +17,10 @@
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "template-rendering-intent" : "original"
   }
 }
