@@ -8,8 +8,8 @@ target '6thWeek_Seminar' do
   # Pods for 6thWeek_Seminar
   pod 'XLPagerTabStrip'
   pod 'BEMCheckBox'
-  pod 'Alamofire'
-  pod 'Kingfisher'
+  pod 'Alamofire', '~> 4.8.2' 
+  pod 'Kingfisher', '~> 5.0'
   pod 'DropDown'
   target '6thWeek_SeminarTests' do
     inherit! :search_paths
