@@ -11,7 +11,9 @@ import UIKit
 class BannerCell: UICollectionViewCell {
     static let identifier :String = "BannerCell"
     @IBOutlet weak var bannerImg: UIImageView!
+    @IBOutlet weak var bannerTF: UITextField!
     func set(_ imgInfo:Banner){
         bannerImg.image = imgInfo.bannerImage
+
     }
 }

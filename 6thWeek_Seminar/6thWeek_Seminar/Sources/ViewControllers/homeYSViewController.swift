@@ -10,10 +10,21 @@ import UIKit
 import XLPagerTabStrip
 
 private var bannerList:[Banner]=[]
+private var menuList:[Menu] = []
 private func setBannerList(){
     let banner1 = Banner(imgName: "imgLamp")
     let banner2 = Banner(imgName: "imgLamp")
     bannerList=[banner1,banner2]
+}
+private func setMenuList(){
+    let menu1 = Menu(menuLabel: "가구")
+    let menu2 = Menu(menuLabel: "조명")
+    let menu3 = Menu(menuLabel: "패브릭")
+    let menu4 = Menu(menuLabel: "리빙")
+    let menu5 = Menu(menuLabel: "유아동")
+    let menu6 = Menu(menuLabel: "수납장")
+
+    menuList = [menu1,menu2,menu3,menu4,menu5,menu6]
 }
 
 private var contentList:[Content]=[]
@@ -28,17 +39,20 @@ class HomeYSViewController: UIViewController {
     @IBOutlet weak var imgCollectionView: UICollectionView!
     //let layout = PagingCollectionViewLayout()
     
+    @IBOutlet weak var menuCollectionView: UICollectionView!
     @IBOutlet weak var homeTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setBannerList()
+        setMenuList()
         setContentList()
         imgCollectionView.delegate = self
         imgCollectionView.dataSource = self
         homeTableView.delegate = self
         homeTableView.dataSource = self
-    
+        menuCollectionView.delegate = self
+        menuCollectionView.dataSource = self
         //네비게이션바 설정
         setNavBar()
         
@@ -115,34 +129,51 @@ class HomeYSViewController: UIViewController {
 }
 extension HomeYSViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return bannerList.count
+
+        if(collectionView == self.imgCollectionView){
+            return bannerList.count
+        }
+        else{
+            return menuList.count
+        }
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let bannerCell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerCell.identifier, for: indexPath) as? BannerCell else {return UICollectionViewCell()}
-        bannerCell.set(bannerList[indexPath.row])
-        return bannerCell
         
+        if (collectionView == self.imgCollectionView){
+            guard let bannerCell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerCell.identifier, for: indexPath) as? BannerCell else {return UICollectionViewCell()}
+                  bannerCell.set(bannerList[indexPath.row])
+                  return bannerCell
+        }
+        else {
+            guard let menuCell = collectionView.dequeueReusableCell(withReuseIdentifier: MenuCell.identifier, for: indexPath) as? MenuCell else {return UICollectionViewCell()}
+            menuCell.setMenu(menuList[indexPath.row])
+            return menuCell        }
     }
     
 }
 
 extension HomeYSViewController :UICollectionViewDelegateFlowLayout{
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+            return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+        
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
+
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+//    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        return 0
+//    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return 0
+//    }
 }
-extension HomeYSViewController:UITableViewDataSource{
+extension HomeYSViewController :UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return contentList.count
     }
     
@@ -163,12 +194,15 @@ extension HomeYSViewController:UITableViewDataSource{
 }
 
 extension HomeYSViewController:UITableViewDelegate{
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 594
     }
+    
 
 //    func scrollViewDidScroll(_ scrollView: UIScrollView) {
 //        
 //    }
 }
+
 
