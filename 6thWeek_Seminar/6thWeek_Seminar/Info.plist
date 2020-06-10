@@ -39,7 +39,7 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>cart_hwangho</string>
+					<string>home_yeseul</string>
 				</dict>
 			</array>
 		</dict>
