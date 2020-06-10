@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.1.0)
+  - Alamofire (4.8.2)
   - BEMCheckBox (1.4.1)
   - DropDown (2.3.13)
   - Kingfisher (5.14.0):
@@ -8,10 +8,10 @@ PODS:
   - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
-  - Alamofire
+  - Alamofire (~> 4.8.2)
   - BEMCheckBox
   - DropDown
-  - Kingfisher
+  - Kingfisher (~> 5.0)
   - XLPagerTabStrip
 
 SPEC REPOS:
@@ -23,12 +23,12 @@ SPEC REPOS:
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
-  Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   Kingfisher: 7b64389a43139c903ec434788344c288217c792d
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: f7aead1b642c7b5e3eca87fa9c7e21daa207458e
+PODFILE CHECKSUM: 29ec5720ad9d55d9c452f6bb5ae35342ef02263e
 
 COCOAPODS: 1.9.1
