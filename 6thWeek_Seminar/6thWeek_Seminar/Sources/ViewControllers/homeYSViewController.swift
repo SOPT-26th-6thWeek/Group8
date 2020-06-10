@@ -75,17 +75,17 @@ class HomeYSViewController: UIViewController {
         let titleLogo = UIImageView()
         titleLogo.image = UIImage(named:logoImageName)
         titleLogo.frame = CGRect(x: 0,y: 0,width: 130,height: 28)
-        let topSearch = UIBarButtonItem(image:UIImage(named:"icTopSearch"),style: UIBarButtonItem.Style.plain,target:nil,action:nil)
-
-        let topCart = UIBarButtonItem(image:UIImage(named:"icTopShoppingbag"),style: UIBarButtonItem.Style.plain,target:nil,action:nil)
-    
+//        let topSearch = UIBarButtonItem(image:UIImage(named:"icTopSearch"),style: UIBarButtonItem.Style.plain,target:nil,action:nil)
+//
+//        let topCart = UIBarButtonItem(image:UIImage(named:"icTopShoppingbag"),style: UIBarButtonItem.Style.plain,target:nil,action:nil)
+//        topCart.width = 20
         self.navigationItem.titleView = titleLogo
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.backgroundColor = UIColor.clear
-        topCart.width = 10
-        topSearch.width = 10
-        self.navigationItem.setRightBarButtonItems([topSearch,topCart], animated: false)
+//        topCart.width = 10
+//        topSearch.width = 10
+//        self.navigationItem.setRightBarButtonItems([topSearch,topCart], animated: false)
         
         
     }

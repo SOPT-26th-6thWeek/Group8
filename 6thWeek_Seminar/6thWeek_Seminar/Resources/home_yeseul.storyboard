@@ -318,7 +318,12 @@
                         <viewLayoutGuide key="safeArea" id="SKT-VM-7bk"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="pBD-tp-Noc"/>
+                    <navigationItem key="navigationItem" id="pBD-tp-Noc">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" width="30" id="I0g-L5-6q6"/>
+                            <barButtonItem title="Item" width="30" id="fqq-CX-S0r"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="homeTableView" destination="UPB-S5-MtU" id="6xS-yV-mBY"/>
