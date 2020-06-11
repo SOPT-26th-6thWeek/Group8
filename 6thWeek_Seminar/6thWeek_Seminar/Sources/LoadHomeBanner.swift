@@ -36,8 +36,11 @@ struct LoadHomeBanner{
     }
     private func decodingBanner(by data:Data)->NetworkResult<Any>{
         let decoder = JSONDecoder()
-        guard let decodedData = try? decoder.decode(BannerData.self,from: data) else {return .serverErr}
-        guard let bannerInfo = decodedData.data else {return .requestErr(decodedData.message)}
-        return .success(bannerInfo)
+        guard let decodedData = try? decoder.decode(BannerData.self,from: data) else {//print("?")
+            return .serverErr}
+        guard let bannerInfo = decodedData.data else {
+            //print("여기")
+            return .requestErr(decodedData.message)}
+        return .success(bannerInfo.result)
     }
 }

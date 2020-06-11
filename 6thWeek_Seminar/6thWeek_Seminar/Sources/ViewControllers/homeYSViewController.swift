@@ -9,7 +9,7 @@
 import UIKit
 //import XLPagerTabStrip
 
-private var bannerList:[BannerInfo]=[]
+var bannerList:[BannerInfo]=[]
 private var menuList:[Menu] = []
 //private func setBannerList(){
 //    let banner1 = Banner(imgName: "imgLamp")
@@ -41,34 +41,43 @@ class HomeYSViewController: UIViewController {
     
     @IBOutlet weak var menuCollectionView: UICollectionView!
     @IBOutlet weak var homeTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //setBannerList()
         setMenuList()
         setContentList()
-        
-        menuCollectionView.delegate = self
-        menuCollectionView.dataSource = self
-        //네비게이션바 설정
-        setNavBar()
-        
-        //배너 통신 결과 가져오기
+
         LoadHomeBanner.shared.homeBanner(){ networkResult in
             switch networkResult{
             case .success(let banner):
-                guard let banner = banner as? [BannerInfo] else {return}
+                
+                guard let banner = banner as? [BannerInfo] else {
+                    return}
+                
                 bannerList = banner
+                //print(bannerList)
+                print(bannerList.count)
             case .requestErr(let message):
                 guard let message = message as? String else {return}
                 print(message)
             case .serverErr: print("serverErr")
             }
         }
+        print(bannerList)
         imgCollectionView.delegate = self
         imgCollectionView.dataSource = self
         homeTableView.delegate = self
         homeTableView.dataSource = self
+        menuCollectionView.delegate = self
+        menuCollectionView.dataSource = self
+        //네비게이션바 설정
+        setNavBar()
+        
+        //배너 통신 결과 가져오기
+        
+        
 
         
         // Do any additional setup after loading the view.
@@ -145,7 +154,8 @@ extension HomeYSViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
         if(collectionView == self.imgCollectionView){
-            collectionView.reloadData()
+            //collectionView.reloadData()
+            
             return bannerList.count
         }
         else{
@@ -155,9 +165,11 @@ extension HomeYSViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if (collectionView == self.imgCollectionView){
-            collectionView.reloadData()
+            
+            print("배너리스트\(bannerList.count)")
+            //collectionView.reloadData()
             guard let bannerCell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerCell.identifier, for: indexPath) as? BannerCell else {return UICollectionViewCell()}
-                  bannerCell.set(bannerList[indexPath.item])
+                  bannerCell.set(bannerList[indexPath.row])
                   return bannerCell
         }
         else {
