@@ -19,7 +19,7 @@ struct shoppingbagService{
     func showBag(result1: [Result], result2: [Result], completion: @escaping(NetworkResult<Any>)->Void){
         
         let header: HTTPHeaders = ["Content-Type": "application/json"]
-        let dataRequest = Alamofire.request(APIConstants.shoppingbagURL, method: .post, parameters: makeParameter(result1,result2), encoding:JSONEncoding.default, headers: header)
+        let dataRequest = Alamofire.request(APIConstants.shoppingbagURL, method: .get, parameters: makeParameter(result1,result2), encoding:JSONEncoding.default, headers: header)
         
         dataRequest.responseData { dataResponse in switch dataResponse.result { // result 값에 따른 분기 처리 진행
         case .success: // 통신 성공
@@ -29,6 +29,7 @@ struct shoppingbagService{
             completion(networkResult)
             
         case .failure: completion(.networkFail) // 통신 실패
+            
             }
         
     }

@@ -8,11 +8,15 @@
 
 import UIKit
 import XLPagerTabStrip
+import Alamofire
     //import iOSDropDown
 
     class SHH_child1ViewController: UIViewController, IndicatorInfoProvider{
 
         private var ItemInformations: [ItemInfo] = []
+ 
+        // 새로운 key-value 값 받아올 myItems 변수 설정
+        var myItems: [[String: Any]] = [[String: Any]]()
         @IBOutlet weak var itemTableView: UITableView!
         
          @IBOutlet weak var totalCostView: UIView!  // 전체 비용
@@ -32,12 +36,24 @@ import XLPagerTabStrip
         }
         
         override func viewDidLoad() {
-            setItemInformations()
+            //setItemInformations()
             super.viewDidLoad()
             itemTableView.delegate = self
             itemTableView.dataSource = self
             
-             self.totalCostView.isHidden = true
+            self.totalCostView.isHidden = true
+            
+            Alamofire.request(APIConstants.shoppingbagURL).responseJSON{(response) in
+                if let responseValue = response.result.value as! [String: Any]?{
+                    if let responseItems = responseValue["data"] as! [[String: Any]]?{
+                        self.myItems = responseItems
+                        self.itemTableView.reloadData()
+                    }
+                }
+                
+            }
+            
+            
         }
         
         
@@ -88,17 +104,20 @@ import XLPagerTabStrip
 
     extension SHH_child1ViewController: UITableViewDataSource{
         
-
-        //func numberOfSections(in tableView: UITableView) -> Int {
-        //    return 2
-        //}
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return ItemInformations.count
+            
+            //return ItemInformations.count
+            return myItems.count
         }
        
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             guard let cartItemCell = tableView.dequeueReusableCell(withIdentifier: ItemCell.identfier, for: indexPath) as? ItemCell else{ return UITableViewCell()}
-            cartItemCell.setItemInfo(itemname: ItemInformations[indexPath.row].itemname, itempoint: ItemInformations[indexPath.row].itempoint, itemcost: ItemInformations[indexPath.row].itemcost)
+            //cartItemCell.setItemInfo(itemname: ItemInformations[indexPath.row].itemname, itempoint: ItemInformations[indexPath.row].itempoint, itemcost: ItemInformations[indexPath.row].itemcost)
+            //return cartItemCell
+            if self.myItems.count > 0{
+                let eachItem = self.myItems[indexPath.row]
+                cartItemCell.itemName.text = (eachItem["name"] as? String) ?? ""
+            }
             return cartItemCell
         }
         
