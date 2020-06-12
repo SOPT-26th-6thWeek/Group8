@@ -46,6 +46,10 @@ import XLPagerTabStrip
                      //print(basket)
                      self.cartItems = basket
                      print(self.cartItems)
+                     DispatchQueue.main.async {
+                        self.itemTableView.reloadData()
+                    }
+                     self.itemTableView.reloadData()
                 case .requestErr(let message):
                     guard let message = message as? String else {return}
                     print(message)
