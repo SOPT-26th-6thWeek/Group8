@@ -38,15 +38,16 @@ class ContentCell: UITableViewCell{
     @IBOutlet weak var dcLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     static let identifier :String = "ContentCell"
-    func set(productName:String,productImgName:String,productInfo:String,dcLabel_:String,priceLabel:String,divideLine:String,marketB:String){
-        self.productName.text = productName
-        self.productImg.image = UIImage(named:productImgName)
-        self.productInfoTV.text = productInfo
-        self.dcLabel.text = dcLabel_
-        self.priceLabel.text = priceLabel
-        self.subProductName.text = productName
-        self.divideLine.image = UIImage(named:divideLine)
-        self.marketBLabel.text = marketB
+    func set(_ homeItemInfo: HomeItemInfo,_ idxPath:Int){
+        print(homeItemInfo)
+        self.productName.text = homeItemInfo.name
+        self.productImg.imageFromUrl(homeItemInfo.image, defaultImgPath: "AppIcon")
+        self.productInfoTV.text = homeItemInfo.content
+        self.dcLabel.text = String(Int(homeItemInfo.option[0].dSale*100))+"%"
+        self.priceLabel.text = String(homeItemInfo.option[0].dPrice)+"원"
+        self.subProductName.text = homeItemInfo.option[0].dName
+        self.divideLine.image = UIImage(named:"divideLine")
+        self.marketBLabel.text = "marketB"
         
-    }
+    }   
 }

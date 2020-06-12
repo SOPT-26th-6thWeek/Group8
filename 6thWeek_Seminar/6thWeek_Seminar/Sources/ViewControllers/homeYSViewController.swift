@@ -10,30 +10,21 @@ import UIKit
 //import XLPagerTabStrip
 
 
-private var menuList:[Menu] = []
+
 private var bannerList:[BannerInfo]=[]
+private var categoryList:[CategoryInfo]=[]
 //private func setBannerList(){
 //    let banner1 = Banner(imgName: "imgLamp")
 //    let banner2 = Banner(imgName: "imgLamp")
 //    bannerList=[banner1,banner2]
 //}
-private func setMenuList(){
-    let menu1 = Menu(menuLabel: "가구")
-    let menu2 = Menu(menuLabel: "조명")
-    let menu3 = Menu(menuLabel: "패브릭")
-    let menu4 = Menu(menuLabel: "리빙")
-    let menu5 = Menu(menuLabel: "유아동")
-    let menu6 = Menu(menuLabel: "수납장")
 
-    menuList = [menu1,menu2,menu3,menu4,menu5,menu6]
-}
-
-private var contentList:[Content]=[]
-private func setContentList(){
-    let content1 = Content(productName: "KADEDO 의자 티크", productImageName: "imgChair", productInfo: "평범한 나의 일상 속 작은 포인트,\n<KADEDO 의자>는 원목으로 이루어져 \n당신의 평범한 공간에 따뜻하고 부드러운 \n생기를 줄 수 있습니다", discount: "3%", price: "93,000원")
-    let content2 = Content(productName: "SIDON 원목가구", productImageName: "imgWoodfurniture", productInfo: "내 집에도 카페 테이블이? \n<SIDON 원목가구>는 집에서 카페 분위기를 \n낼 수 있습니다. \n당신의 집에서 홈카페를 즐겨보세요.", discount: "5%", price: "449,000원")
-    contentList = [content1,content2]
-}
+private var itemList:[HomeItemInfo]=[]
+//private func setContentList(){
+//    let content1 = Content(productName: "KADEDO 의자 티크", productImageName: "imgChair", productInfo: "평범한 나의 일상 속 작은 포인트,\n<KADEDO 의자>는 원목으로 이루어져 \n당신의 평범한 공간에 따뜻하고 부드러운 \n생기를 줄 수 있습니다", discount: "3%", price: "93,000원")
+//    let content2 = Content(productName: "SIDON 원목가구", productImageName: "imgWoodfurniture", productInfo: "내 집에도 카페 테이블이? \n<SIDON 원목가구>는 집에서 카페 분위기를 \n낼 수 있습니다. \n당신의 집에서 홈카페를 즐겨보세요.", discount: "5%", price: "449,000원")
+//    //contentList = [content1,content2]
+//}
 class HomeYSViewController: UIViewController {
     
     //var bannerList:[BannerInfo] = []
@@ -47,8 +38,8 @@ class HomeYSViewController: UIViewController {
         super.viewDidLoad()
         
         //setBannerList()
-        setMenuList()
-        setContentList()
+        //setMenuList()
+        //setContentList()
 
         LoadHomeBanner.shared.homeBanner(){ networkResult in
             switch networkResult{
@@ -56,12 +47,14 @@ class HomeYSViewController: UIViewController {
                 print(bannerList)
                 guard let banner = banner as? [BannerInfo] else {
                     return}
-                print("print banner \(banner)")
+                
                 bannerList = banner
+                print("print banner \(bannerList)")
                 //print(bannerList)
                 //print(bannerList.count)
                 DispatchQueue.main.async {
                                   self.imgCollectionView.reloadData()
+                    self.menuCollectionView.reloadData()
                               }
                 
               
@@ -72,7 +65,50 @@ class HomeYSViewController: UIViewController {
             }
             
         }
-        print(bannerList)
+        LoadHomeCategory.shared.homeCategory(){ networkResult in
+        switch networkResult{
+        case .success(let category):
+            guard let category = category as? [CategoryInfo] else {
+                return}
+            //print("print category \(category)")
+            categoryList = category            //print(bannerList)
+            //print(bannerList.count)
+            DispatchQueue.main.async {
+                              self.imgCollectionView.reloadData()
+                //self.menuCollectionView.reloadData()
+                          }
+            
+          
+        case .requestErr(let message):
+            guard let message = message as? String else {return}
+            print(message)
+        case .serverErr: print("serverErr")
+        }
+            
+        }
+        LoadHomeItem.shared.homeItem(categoryIdx:1){ networkResult in
+        switch networkResult{
+        case .success(let item):
+            guard let item = item as? [HomeItemInfo] else {
+                return}
+            //print("print category \(category)")
+            itemList = item           //print(bannerList)
+            print("확인\(itemList[0].option[0].dName)")
+            //print(bannerList.count)
+            DispatchQueue.main.async {
+                              self.imgCollectionView.reloadData()
+                self.menuCollectionView.reloadData()
+                self.homeTableView.reloadData()
+                          }
+            
+          
+        case .requestErr(let message):
+            guard let message = message as? String else {return}
+            print(message)
+        case .serverErr: print("serverErr")
+        }
+            
+        }
         imgCollectionView.delegate = self
         imgCollectionView.dataSource = self
         homeTableView.delegate = self
@@ -166,7 +202,7 @@ extension HomeYSViewController: UICollectionViewDataSource{
             return bannerList.count
         }
         else{
-            return menuList.count
+            return categoryList.count
         }
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -181,7 +217,7 @@ extension HomeYSViewController: UICollectionViewDataSource{
         }
         else {
             guard let menuCell = collectionView.dequeueReusableCell(withReuseIdentifier: MenuCell.identifier, for: indexPath) as? MenuCell else {return UICollectionViewCell()}
-            menuCell.setMenu(menuList[indexPath.row])
+            menuCell.setCategory(categoryList[indexPath.row])
             return menuCell        }
     }
     
@@ -190,11 +226,13 @@ extension HomeYSViewController: UICollectionViewDataSource{
 extension HomeYSViewController :UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
             return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
         
     }
-
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath -> Int?) {
+//
+//    }
+}
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
 //        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
 //    }
@@ -204,24 +242,23 @@ extension HomeYSViewController :UICollectionViewDelegateFlowLayout{
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
 //        return 0
 //    }
-}
+
 extension HomeYSViewController :UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return contentList.count
+        print(itemList.count)
+        return itemList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let contentCell = tableView.dequeueReusableCell(withIdentifier: ContentCell.identifier, for: indexPath) as? ContentCell else{return UITableViewCell()}
-        contentCell.set(productName: contentList[indexPath.row].productName, productImgName: contentList[indexPath.row].productImageName, productInfo: contentList[indexPath.row].productInfo, dcLabel_: contentList[indexPath.row].discount
-            , priceLabel: contentList[indexPath.row].price, divideLine: contentList[indexPath.row].divideLine,marketB:contentList[indexPath.row].marketB)
+        print(indexPath.row)
+        contentCell.set(itemList[indexPath.row],indexPath.row)
         contentCell.cartButton.addTarget(self, action: #selector(cartAction(_:)), for: .touchUpInside)
         //contentCell.cartButton
         
         return contentCell
     }
-    
 //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 //        <#code#>
 //    }

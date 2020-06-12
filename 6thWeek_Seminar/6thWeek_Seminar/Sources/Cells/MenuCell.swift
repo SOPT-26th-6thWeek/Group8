@@ -9,10 +9,13 @@
 import UIKit
 
 class MenuCell: UICollectionViewCell {
+    var index : Int = 0
     static let identifier : String = "MenuCell"
     
+    
     @IBOutlet weak var menuButton: UIButton!
-    func setMenu(_ menuInfo:Menu){
-        menuButton.setTitle(menuInfo.menuTitle,for: .normal)
+    func setCategory(_ categoryInfo : CategoryInfo){
+        menuButton.setTitle(categoryInfo.categoryName,for: .normal)
+        self.index = categoryInfo.categoryIdx
     }
 }

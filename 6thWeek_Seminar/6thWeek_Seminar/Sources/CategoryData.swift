@@ -12,7 +12,7 @@ struct CategoryData: Codable {
     var status: Int
     var success: Bool
     var message: String
-    var data: [CategoryInfo]?
+    var data: CategoryResult?
     
     enum CodingKeys: String, CodingKey {
         case status = "status"
@@ -26,10 +26,13 @@ struct CategoryData: Codable {
         status = (try? values.decode(Int.self, forKey: .status)) ?? -1
         success = (try? values.decode(Bool.self, forKey: .success)) ?? false
         message = (try? values.decode(String.self, forKey: .message)) ?? ""
-        data = (try? values.decode([CategoryInfo].self, forKey: .data)) ?? nil
+        data = (try? values.decode(CategoryResult?.self, forKey: .data)) ?? nil
     }
 }
 // MARK: - Datum
+struct CategoryResult: Codable{
+    var result : [CategoryInfo]
+}
 struct CategoryInfo: Codable {
     var categoryIdx: Int
     var categoryName: String

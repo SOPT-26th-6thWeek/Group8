@@ -12,9 +12,10 @@ class BannerCell: UICollectionViewCell {
     static let identifier :String = "BannerCell"
     @IBOutlet weak var bannerImg: UIImageView!
     @IBOutlet weak var bannerTF: UITextField!
+    @IBOutlet weak var bannerSubTitle: UILabel!
     func set(_ bannerInfo:BannerInfo){
         bannerImg.imageFromUrl(bannerInfo.image, defaultImgPath: "AppIcon")
         bannerTF.text = bannerInfo.title
-
+        bannerSubTitle.text = bannerInfo.subtitle
     }
 }
