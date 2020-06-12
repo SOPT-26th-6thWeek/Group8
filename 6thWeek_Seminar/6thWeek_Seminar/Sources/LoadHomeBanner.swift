@@ -13,6 +13,7 @@ struct LoadHomeBanner{
     static let shared = LoadHomeBanner()
     
     func homeBanner(completion:@escaping (NetworkResult<Any>) -> Void){
+//        var bannerList : [BannerInfo] = []
         let header: HTTPHeaders = ["Content-Type":"application/json"]
         let dataRequest = Alamofire.request(APIConstants.homeBannerURL,method: .get,parameters:nil,encoding: JSONEncoding.default, headers: header)
         dataRequest.responseData { dataResponse in

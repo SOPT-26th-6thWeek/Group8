@@ -9,8 +9,9 @@
 import UIKit
 //import XLPagerTabStrip
 
-var bannerList:[BannerInfo]=[]
+
 private var menuList:[Menu] = []
+private var bannerList:[BannerInfo]=[]
 //private func setBannerList(){
 //    let banner1 = Banner(imgName: "imgLamp")
 //    let banner2 = Banner(imgName: "imgLamp")
@@ -35,7 +36,7 @@ private func setContentList(){
 }
 class HomeYSViewController: UIViewController {
     
-    
+    //var bannerList:[BannerInfo] = []
     @IBOutlet weak var imgCollectionView: UICollectionView!
     //let layout = PagingCollectionViewLayout()
     
@@ -52,18 +53,24 @@ class HomeYSViewController: UIViewController {
         LoadHomeBanner.shared.homeBanner(){ networkResult in
             switch networkResult{
             case .success(let banner):
-                
+                print(bannerList)
                 guard let banner = banner as? [BannerInfo] else {
                     return}
-                
+                print("print banner \(banner)")
                 bannerList = banner
                 //print(bannerList)
-                print(bannerList.count)
+                //print(bannerList.count)
+                DispatchQueue.main.async {
+                                  self.imgCollectionView.reloadData()
+                              }
+                
+              
             case .requestErr(let message):
                 guard let message = message as? String else {return}
                 print(message)
             case .serverErr: print("serverErr")
             }
+            
         }
         print(bannerList)
         imgCollectionView.delegate = self
@@ -169,7 +176,7 @@ extension HomeYSViewController: UICollectionViewDataSource{
             print("배너리스트\(bannerList.count)")
             //collectionView.reloadData()
             guard let bannerCell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerCell.identifier, for: indexPath) as? BannerCell else {return UICollectionViewCell()}
-                  bannerCell.set(bannerList[indexPath.row])
+            bannerCell.set(bannerList[indexPath.row])
                   return bannerCell
         }
         else {
@@ -232,5 +239,3 @@ extension HomeYSViewController:UITableViewDelegate{
 //        
 //    }
 }
-
-
