@@ -7,15 +7,16 @@
 //
 
 import UIKit
-import XLPagerTabStrip
+//import XLPagerTabStrip
 
-private var bannerList:[Banner]=[]
+
 private var menuList:[Menu] = []
-private func setBannerList(){
-    let banner1 = Banner(imgName: "imgLamp")
-    let banner2 = Banner(imgName: "imgLamp")
-    bannerList=[banner1,banner2]
-}
+private var bannerList:[BannerInfo]=[]
+//private func setBannerList(){
+//    let banner1 = Banner(imgName: "imgLamp")
+//    let banner2 = Banner(imgName: "imgLamp")
+//    bannerList=[banner1,banner2]
+//}
 private func setMenuList(){
     let menu1 = Menu(menuLabel: "가구")
     let menu2 = Menu(menuLabel: "조명")
@@ -35,18 +36,43 @@ private func setContentList(){
 }
 class HomeYSViewController: UIViewController {
     
-    
+    //var bannerList:[BannerInfo] = []
     @IBOutlet weak var imgCollectionView: UICollectionView!
     //let layout = PagingCollectionViewLayout()
     
     @IBOutlet weak var menuCollectionView: UICollectionView!
     @IBOutlet weak var homeTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setBannerList()
+        //setBannerList()
         setMenuList()
         setContentList()
+
+        LoadHomeBanner.shared.homeBanner(){ networkResult in
+            switch networkResult{
+            case .success(let banner):
+                print(bannerList)
+                guard let banner = banner as? [BannerInfo] else {
+                    return}
+                print("print banner \(banner)")
+                bannerList = banner
+                //print(bannerList)
+                //print(bannerList.count)
+                DispatchQueue.main.async {
+                                  self.imgCollectionView.reloadData()
+                              }
+                
+              
+            case .requestErr(let message):
+                guard let message = message as? String else {return}
+                print(message)
+            case .serverErr: print("serverErr")
+            }
+            
+        }
+        print(bannerList)
         imgCollectionView.delegate = self
         imgCollectionView.dataSource = self
         homeTableView.delegate = self
@@ -56,6 +82,10 @@ class HomeYSViewController: UIViewController {
         //네비게이션바 설정
         setNavBar()
         
+        //배너 통신 결과 가져오기
+        
+        
+
         
         // Do any additional setup after loading the view.
     }
@@ -131,6 +161,8 @@ extension HomeYSViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
         if(collectionView == self.imgCollectionView){
+            //collectionView.reloadData()
+            
             return bannerList.count
         }
         else{
@@ -140,8 +172,11 @@ extension HomeYSViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if (collectionView == self.imgCollectionView){
+            
+            print("배너리스트\(bannerList.count)")
+            //collectionView.reloadData()
             guard let bannerCell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerCell.identifier, for: indexPath) as? BannerCell else {return UICollectionViewCell()}
-                  bannerCell.set(bannerList[indexPath.row])
+            bannerCell.set(bannerList[indexPath.row])
                   return bannerCell
         }
         else {
@@ -204,5 +239,3 @@ extension HomeYSViewController:UITableViewDelegate{
 //        
 //    }
 }
-
-

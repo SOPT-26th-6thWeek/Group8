@@ -8,11 +8,14 @@
 
 import UIKit
 
-struct Banner{
-    var bannerImage: UIImage?
-    init(imgName:String)
-    {
-        self.bannerImage = UIImage(named:imgName)
-        
-    }
-}
+//struct Banner{
+//    var title: String
+//    var subtitle: String
+//    var bannerImage: UIImage?
+//    init(title:String, imgName:String)
+//    {
+//        self.bannerImage = UIImage(named:imgName)
+//        self.title = title
+//
+//    }
+//}

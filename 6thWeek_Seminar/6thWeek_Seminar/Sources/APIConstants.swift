@@ -10,4 +10,6 @@ import Foundation
 struct APIConstants{
     static let baseURL = "http://3.34.108.202:3000"
     static let shoppingbagURL = APIConstants.baseURL + "/shoppingbag/iOS"
+    static let homeBannerURL = APIConstants.baseURL + "/home/banner"
+    static let homeCategoryURL = APIConstants.baseURL + "/home/category"
 }

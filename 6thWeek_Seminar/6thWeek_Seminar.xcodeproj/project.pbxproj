@@ -28,6 +28,10 @@
 		B82CB6EF249000EE002B0704 /* cart_hwangho.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B82CB6EE249000EE002B0704 /* cart_hwangho.storyboard */; };
 		B82CB6F12490D282002B0704 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82CB6F02490D282002B0704 /* MenuCell.swift */; };
 		B82CB6F32490D2EE002B0704 /* menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82CB6F22490D2EE002B0704 /* menu.swift */; };
+		B82CB6F524914E48002B0704 /* BannerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82CB6F424914E48002B0704 /* BannerData.swift */; };
+		B82CB6F7249150FE002B0704 /* CategoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82CB6F6249150FE002B0704 /* CategoryData.swift */; };
+		B82CB6FB249152BA002B0704 /* HomeItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82CB6FA249152BA002B0704 /* HomeItemData.swift */; };
+		B82CB6FD2491580B002B0704 /* LoadHomeBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82CB6FC2491580A002B0704 /* LoadHomeBanner.swift */; };
 		B8410FA82481225E00A7EB04 /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8410FA72481225E00A7EB04 /* ContentCell.swift */; };
 		B8410FAA2481324D00A7EB04 /* content.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8410FA92481324C00A7EB04 /* content.swift */; };
 		B8939346247D035F00A4AB28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8939345247D035F00A4AB28 /* AppDelegate.swift */; };
@@ -41,7 +45,7 @@
 		B893937D247D068B00A4AB28 /* home_siyeon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B893937C247D068B00A4AB28 /* home_siyeon.storyboard */; };
 		B8939380247D08A700A4AB28 /* home_yeseul.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B893937F247D08A700A4AB28 /* home_yeseul.storyboard */; };
 		B8B39AAE2482435900E3E2A2 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B39AAD2482435900E3E2A2 /* ItemCell.swift */; };
-		F23281C42490BFEE00CD8F0B /* shoppingbagService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23281C32490BFEE00CD8F0B /* shoppingbagService.swift */; };
+		B8F5810F24931D1B001D25EE /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F5810E24931D1B001D25EE /* UIImageView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +91,10 @@
 		B82CB6EE249000EE002B0704 /* cart_hwangho.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = cart_hwangho.storyboard; sourceTree = "<group>"; };
 		B82CB6F02490D282002B0704 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		B82CB6F22490D2EE002B0704 /* menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu.swift; sourceTree = "<group>"; };
+		B82CB6F424914E48002B0704 /* BannerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerData.swift; sourceTree = "<group>"; };
+		B82CB6F6249150FE002B0704 /* CategoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryData.swift; sourceTree = "<group>"; };
+		B82CB6FA249152BA002B0704 /* HomeItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemData.swift; sourceTree = "<group>"; };
+		B82CB6FC2491580A002B0704 /* LoadHomeBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadHomeBanner.swift; sourceTree = "<group>"; };
 		B8410FA72481225E00A7EB04 /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
 		B8410FA92481324C00A7EB04 /* content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = content.swift; sourceTree = "<group>"; };
 		B8939342247D035F00A4AB28 /* 6thWeek_Seminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 6thWeek_Seminar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +114,7 @@
 		B893937C247D068B00A4AB28 /* home_siyeon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = home_siyeon.storyboard; sourceTree = "<group>"; };
 		B893937F247D08A700A4AB28 /* home_yeseul.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = home_yeseul.storyboard; sourceTree = "<group>"; };
 		B8B39AAD2482435900E3E2A2 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		B8F5810E24931D1B001D25EE /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		CE27C2EEF02CDC7B881043D0 /* Pods-6thWeek_Seminar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6thWeek_Seminar.release.xcconfig"; path = "Target Support Files/Pods-6thWeek_Seminar/Pods-6thWeek_Seminar.release.xcconfig"; sourceTree = "<group>"; };
 		D3795B97BEFCB4CD6505AF04 /* Pods_6thWeek_Seminar_6thWeek_SeminarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_6thWeek_Seminar_6thWeek_SeminarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F23281C32490BFEE00CD8F0B /* shoppingbagService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoppingbagService.swift; sourceTree = "<group>"; };
@@ -229,16 +238,20 @@
 		B8939378247D044300A4AB28 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B8F5810E24931D1B001D25EE /* UIImageView+Extensions.swift */,
 				B82CB6D7248FFFB2002B0704 /* APIConstants.swift */,
 				B82CB6D6248FFFB2002B0704 /* NetworkResult.swift */,
 				B82CB6D8248FFFB2002B0704 /* shoppingbagData.swift */,
-				F23281C32490BFEE00CD8F0B /* shoppingbagService.swift */,
+				B82CB6F424914E48002B0704 /* BannerData.swift */,
+				B82CB6F6249150FE002B0704 /* CategoryData.swift */,
+				B82CB6FA249152BA002B0704 /* HomeItemData.swift */,
 				B819E139247FC50700424856 /* Cells */,
 				B8939379247D045100A4AB28 /* ViewControllers */,
 				B819E13A247FC66800424856 /* banner.swift */,
 				B8410FA92481324C00A7EB04 /* content.swift */,
 				B82CB6E8248FFFED002B0704 /* ItemInfo.swift */,
 				B82CB6F22490D2EE002B0704 /* menu.swift */,
+				B82CB6FC2491580A002B0704 /* LoadHomeBanner.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -518,25 +531,29 @@
 				B82CB6E9248FFFED002B0704 /* ItemInfo.swift in Sources */,
 				B82CB6E2248FFFD3002B0704 /* SHH_child2ViewController.swift in Sources */,
 				B82CB6E5248FFFD3002B0704 /* ParentViewController.swift in Sources */,
-				F23281C42490BFEE00CD8F0B /* shoppingbagService.swift in Sources */,
+				B8F5810F24931D1B001D25EE /* UIImageView+Extensions.swift in Sources */,
 				B893934A247D035F00A4AB28 /* ViewController.swift in Sources */,
 				B8410FA82481225E00A7EB04 /* ContentCell.swift in Sources */,
 				B82CB6E7248FFFD3002B0704 /* MenuTabViewController.swift in Sources */,
 				B819E136247FB2E600424856 /* homeYSViewController.swift in Sources */,
+				B82CB6F524914E48002B0704 /* BannerData.swift in Sources */,
 				B82CB6ED24900006002B0704 /* SHH_child1ViewController.swift in Sources */,
 				B82CB6E4248FFFD3002B0704 /* SHH_ParentViewController.swift in Sources */,
 				B82CB6DA248FFFB2002B0704 /* APIConstants.swift in Sources */,
 				B82CB6F32490D2EE002B0704 /* menu.swift in Sources */,
 				B8B39AAE2482435900E3E2A2 /* ItemCell.swift in Sources */,
+				B82CB6F7249150FE002B0704 /* CategoryData.swift in Sources */,
 				B8410FAA2481324D00A7EB04 /* content.swift in Sources */,
 				B82CB6D9248FFFB2002B0704 /* NetworkResult.swift in Sources */,
 				B82CB6DB248FFFB2002B0704 /* shoppingbagData.swift in Sources */,
+				B82CB6FB249152BA002B0704 /* HomeItemData.swift in Sources */,
 				B82CB6F12490D282002B0704 /* MenuCell.swift in Sources */,
 				B8939346247D035F00A4AB28 /* AppDelegate.swift in Sources */,
 				B819E13B247FC66800424856 /* banner.swift in Sources */,
 				B819E138247FC4F900424856 /* BannerCell.swift in Sources */,
 				B82CB6E6248FFFD3002B0704 /* childViewController1.swift in Sources */,
 				B8939348247D035F00A4AB28 /* SceneDelegate.swift in Sources */,
+				B82CB6FD2491580B002B0704 /* LoadHomeBanner.swift in Sources */,
 				B82CB6E3248FFFD3002B0704 /* childViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

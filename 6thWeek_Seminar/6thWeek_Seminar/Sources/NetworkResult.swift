@@ -7,10 +7,13 @@
 //
 
 enum NetworkResult<T>{
-    case success (T)
+    case success (T?)
     case requestErr(T)
     case serverErr
+<<<<<<< HEAD
     case pathErr
     case networkFail
     
+=======
+>>>>>>> master
 }
