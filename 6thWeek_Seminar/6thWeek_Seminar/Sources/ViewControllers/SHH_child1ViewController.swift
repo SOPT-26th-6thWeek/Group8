@@ -17,6 +17,7 @@ import Alamofire
  
         // 새로운 key-value 값 받아올 myItems 변수 설정
         var myItems: [[String: Any]] = [[String: Any]]()
+        
         @IBOutlet weak var itemTableView: UITableView!
         
          @IBOutlet weak var totalCostView: UIView!  // 전체 비용
@@ -43,9 +44,12 @@ import Alamofire
             
             self.totalCostView.isHidden = true
             
-            Alamofire.request(APIConstants.shoppingbagURL).responseJSON{(response) in
-                if let responseValue = response.result.value as! [String: Any]?{
-                    if let responseItems = responseValue["data"] as! [[String: Any]]?{
+            Alamofire.request(APIConstants.shoppingbagURL).responseJSON{ (response) in
+                if let responseValue = response.result.value as! [String: Any]? {
+                    print(responseValue)
+                    
+                    if let responseItems = responseValue["data"] as! ([[String: Any]])? {
+                        print(responseItems)
                         self.myItems = responseItems
                         self.itemTableView.reloadData()
                     }
@@ -117,6 +121,7 @@ import Alamofire
             if self.myItems.count > 0{
                 let eachItem = self.myItems[indexPath.row]
                 cartItemCell.itemName.text = (eachItem["name"] as? String) ?? ""
+                print(cartItemCell)
             }
             return cartItemCell
         }
