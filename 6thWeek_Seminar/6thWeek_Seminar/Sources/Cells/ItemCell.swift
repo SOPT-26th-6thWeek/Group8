@@ -58,9 +58,12 @@ class ItemCell: UITableViewCell {
     
     func setItemInfo(_ cartInfo:Delivery){
         
-        itemImageView.image = UIImage(named: cartInfo.img)
+       
+        itemImageView.imageFromUrl(cartInfo.img, defaultImgPath: "")
         itemName.text = cartInfo.name
-        
+        cost.text = String(cartInfo.price)
+        point.text = String(cartInfo.savings)
+        quantity.text = String(cartInfo.quantity)
     }
 
 }
