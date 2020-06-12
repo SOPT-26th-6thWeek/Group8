@@ -13,7 +13,7 @@ class BannerCell: UICollectionViewCell {
     @IBOutlet weak var bannerImg: UIImageView!
     @IBOutlet weak var bannerTF: UITextField!
     func set(_ bannerInfo:BannerInfo){
-        bannerImg.image = UIImage(named:bannerInfo.image)
+        bannerImg.imageFromUrl(bannerInfo.image, defaultImgPath: "AppIcon")
         bannerTF.text = bannerInfo.title
 
     }
