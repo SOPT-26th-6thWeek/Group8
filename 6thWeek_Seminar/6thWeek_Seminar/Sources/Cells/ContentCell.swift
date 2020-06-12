@@ -46,7 +46,7 @@ class ContentCell: UITableViewCell{
         self.dcLabel.text = String(Int(homeItemInfo.option[0].dSale*100))+"%"
         self.priceLabel.text = String(homeItemInfo.option[0].dPrice)+"원"
         self.subProductName.text = homeItemInfo.option[0].dName
-        self.divideLine.image = UIImage(named:"divideLine")
+        self.divideLine.image = UIImage(named:"imgDivideLine")
         self.marketBLabel.text = "marketB"
         
     }   
