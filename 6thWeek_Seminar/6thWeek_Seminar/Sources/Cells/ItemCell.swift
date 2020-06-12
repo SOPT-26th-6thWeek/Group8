@@ -56,12 +56,14 @@ class ItemCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setItemInfo(itemname: String, itempoint: String, itemcost: String){
+    func setItemInfo(_ cartInfo:Delivery){
         
-        itemImageView.image = UIImage(named: itemname)
-        itemName.text = itemname
-        point.text = itempoint
-        cost.text = itemcost
+       
+        itemImageView.imageFromUrl(cartInfo.img, defaultImgPath: "")
+        itemName.text = cartInfo.name
+        cost.text = String(cartInfo.price)
+        point.text = String(cartInfo.savings)
+        quantity.text = String(cartInfo.quantity)
     }
 
 }
