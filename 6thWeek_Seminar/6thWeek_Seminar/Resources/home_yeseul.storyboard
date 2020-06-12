@@ -204,7 +204,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2N-AR-sed" userLabel="priceLabel">
-                                                    <rect key="frame" x="67" y="809" width="73" height="17"/>
+                                                    <rect key="frame" x="75" y="809" width="73" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="17" id="HiO-Qf-lcf"/>
                                                         <constraint firstAttribute="width" constant="73" id="i6E-TA-maM"/>
@@ -214,9 +214,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l86-IR-qXA">
-                                                    <rect key="frame" x="42" y="806" width="22" height="20"/>
+                                                    <rect key="frame" x="42" y="806" width="30" height="20"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="22" id="7zd-lW-tAM"/>
+                                                        <constraint firstAttribute="width" constant="30" id="7zd-lW-tAM"/>
                                                         <constraint firstAttribute="height" constant="20" id="WKk-ni-63I"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
