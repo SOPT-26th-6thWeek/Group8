@@ -10,6 +10,7 @@ import UIKit
 //import XLPagerTabStrip
 
 
+let sb = UIStoryboard.init(name: "cart_hwangho", bundle: nil)
 
 private var bannerList:[BannerInfo]=[]
 private var categoryList:[CategoryInfo]=[]
@@ -28,6 +29,10 @@ private var itemList:[HomeItemInfo]=[]
 class HomeYSViewController: UIViewController {
     
     //var bannerList:[BannerInfo] = []
+    @IBAction func gotoCart(_ sender: Any) {
+        if let dvc = sb.instantiateViewController(identifier: "ParentVC") as? SHH_ParentViewController { self.navigationController?.pushViewController(dvc, animated: true)
+        }
+    }
     @IBOutlet weak var imgCollectionView: UICollectionView!
     //let layout = PagingCollectionViewLayout()
     

@@ -29,6 +29,10 @@ import XLPagerTabStrip
             newCell?.label.textColor = self?.purpleInspireColor
             }
             super.viewDidLoad()
+            self.navigationController?.navigationBar.topItem?.title = ""
+            self.navigationController?.navigationBar.tintColor = UIColor.darkGray
+            //self.navi
+            
             // Do any additional setup after loading the view.
         }
         

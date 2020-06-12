@@ -351,10 +351,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="pBD-tp-Noc">
-                        <rightBarButtonItems>
-                            <barButtonItem title="Item" image="icTopSearch" width="30" id="I0g-L5-6q6"/>
-                            <barButtonItem title="Item" image="icTopShoppingbag" width="30" id="fqq-CX-S0r"/>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icTopShoppingbag" width="30" id="fqq-CX-S0r">
+                            <connections>
+                                <action selector="gotoCart:" destination="dJG-Rv-Gz8" id="EUI-W9-QyC"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -407,7 +408,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Fqz-mw-ztw">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="MZz-6x-GIK" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="MZz-6x-GIK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="892-fx-6Mm">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -2210,7 +2211,6 @@ AAAAAAAAAAAAAAABmaY
         <image name="icRightArrow" width="70" height="70"/>
         <image name="icTabHome" width="70" height="58"/>
         <image name="icTabSearch" width="70" height="58"/>
-        <image name="icTopSearch" width="48" height="48"/>
         <image name="icTopShoppingbag" width="48" height="48"/>
         <image name="imgBlackFillter" width="375" height="508"/>
         <image name="loveAndRomance" width="17" height="17"/>

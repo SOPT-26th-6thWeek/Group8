@@ -36,6 +36,7 @@
 		B88A05B524938E75005715DB /* LoadHomeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88A05B424938E75005715DB /* LoadHomeCategory.swift */; };
 		B88A05B7249391AB005715DB /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88A05B6249391AB005715DB /* MenuCell.swift */; };
 		B88A05B9249392ED005715DB /* LoadHomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88A05B8249392ED005715DB /* LoadHomeItem.swift */; };
+		B88A05BB2493CAD8005715DB /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88A05BA2493CAD8005715DB /* UIColor+Extensions.swift */; };
 		B8939346247D035F00A4AB28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8939345247D035F00A4AB28 /* AppDelegate.swift */; };
 		B8939348247D035F00A4AB28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8939347247D035F00A4AB28 /* SceneDelegate.swift */; };
 		B893934A247D035F00A4AB28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8939349247D035F00A4AB28 /* ViewController.swift */; };
@@ -102,6 +103,7 @@
 		B88A05B424938E75005715DB /* LoadHomeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadHomeCategory.swift; sourceTree = "<group>"; };
 		B88A05B6249391AB005715DB /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		B88A05B8249392ED005715DB /* LoadHomeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadHomeItem.swift; sourceTree = "<group>"; };
+		B88A05BA2493CAD8005715DB /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		B8939342247D035F00A4AB28 /* 6thWeek_Seminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 6thWeek_Seminar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8939345247D035F00A4AB28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8939347247D035F00A4AB28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				B82CB6FC2491580A002B0704 /* LoadHomeBanner.swift */,
 				B88A05B424938E75005715DB /* LoadHomeCategory.swift */,
 				B88A05B8249392ED005715DB /* LoadHomeItem.swift */,
+				B88A05BA2493CAD8005715DB /* UIColor+Extensions.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				B819E136247FB2E600424856 /* homeYSViewController.swift in Sources */,
 				B82CB6F524914E48002B0704 /* BannerData.swift in Sources */,
 				B82CB6ED24900006002B0704 /* SHH_child1ViewController.swift in Sources */,
+				B88A05BB2493CAD8005715DB /* UIColor+Extensions.swift in Sources */,
 				B82CB6E4248FFFD3002B0704 /* SHH_ParentViewController.swift in Sources */,
 				B82CB6DA248FFFB2002B0704 /* APIConstants.swift in Sources */,
 				B82CB6F32490D2EE002B0704 /* menu.swift in Sources */,
