@@ -46,6 +46,7 @@
 		B8939380247D08A700A4AB28 /* home_yeseul.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B893937F247D08A700A4AB28 /* home_yeseul.storyboard */; };
 		B8B39AAE2482435900E3E2A2 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B39AAD2482435900E3E2A2 /* ItemCell.swift */; };
 		B8F5810F24931D1B001D25EE /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F5810E24931D1B001D25EE /* UIImageView+Extensions.swift */; };
+		F21694C7249369B200548E22 /* basketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21694C6249369B200548E22 /* basketService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		B8F5810E24931D1B001D25EE /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		CE27C2EEF02CDC7B881043D0 /* Pods-6thWeek_Seminar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6thWeek_Seminar.release.xcconfig"; path = "Target Support Files/Pods-6thWeek_Seminar/Pods-6thWeek_Seminar.release.xcconfig"; sourceTree = "<group>"; };
 		D3795B97BEFCB4CD6505AF04 /* Pods_6thWeek_Seminar_6thWeek_SeminarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_6thWeek_Seminar_6thWeek_SeminarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F21694C6249369B200548E22 /* basketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basketService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +244,7 @@
 				B82CB6D6248FFFB2002B0704 /* NetworkResult.swift */,
 				B82CB6D8248FFFB2002B0704 /* shoppingbagData.swift */,
 				B82CB6F424914E48002B0704 /* BannerData.swift */,
+				F21694C6249369B200548E22 /* basketService.swift */,
 				B82CB6F6249150FE002B0704 /* CategoryData.swift */,
 				B82CB6FA249152BA002B0704 /* HomeItemData.swift */,
 				B819E139247FC50700424856 /* Cells */,
@@ -552,6 +555,7 @@
 				B819E138247FC4F900424856 /* BannerCell.swift in Sources */,
 				B82CB6E6248FFFD3002B0704 /* childViewController1.swift in Sources */,
 				B8939348247D035F00A4AB28 /* SceneDelegate.swift in Sources */,
+				F21694C7249369B200548E22 /* basketService.swift in Sources */,
 				B82CB6FD2491580B002B0704 /* LoadHomeBanner.swift in Sources */,
 				B82CB6E3248FFFD3002B0704 /* childViewController2.swift in Sources */,
 			);

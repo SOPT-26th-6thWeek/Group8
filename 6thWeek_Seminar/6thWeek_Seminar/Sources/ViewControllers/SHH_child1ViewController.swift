@@ -13,6 +13,8 @@ import XLPagerTabStrip
     class SHH_child1ViewController: UIViewController, IndicatorInfoProvider{
 
         private var ItemInformations: [ItemInfo] = []
+        private var cartItems: [Delivery] = []
+        
         @IBOutlet weak var itemTableView: UITableView!
         
          @IBOutlet weak var totalCostView: UIView!  // 전체 비용
@@ -34,10 +36,33 @@ import XLPagerTabStrip
         override func viewDidLoad() {
             setItemInformations()
             super.viewDidLoad()
+            
+            basketService.shared.getBasketService(){ networkResult in
+                switch networkResult {
+               
+                    
+                case .success(let basket):
+                     guard let basket = basket as? [Delivery] else {return}
+                     //print(basket)
+                     self.cartItems = basket
+                     print(self.cartItems)
+                case .requestErr(let message):
+                    guard let message = message as? String else {return}
+                    print(message)
+                
+                case .serverErr:
+                    print("serverErr")
+             
+                }
+                
+                
+                
+            }
+    
             itemTableView.delegate = self
             itemTableView.dataSource = self
             
-             self.totalCostView.isHidden = true
+            self.totalCostView.isHidden = true
         }
         
         
@@ -88,17 +113,14 @@ import XLPagerTabStrip
 
     extension SHH_child1ViewController: UITableViewDataSource{
         
-
-        //func numberOfSections(in tableView: UITableView) -> Int {
-        //    return 2
-        //}
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return ItemInformations.count
+            return cartItems.count
         }
        
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            print("장바구니개수\(self.cartItems.count)")
             guard let cartItemCell = tableView.dequeueReusableCell(withIdentifier: ItemCell.identfier, for: indexPath) as? ItemCell else{ return UITableViewCell()}
-            cartItemCell.setItemInfo(itemname: ItemInformations[indexPath.row].itemname, itempoint: ItemInformations[indexPath.row].itempoint, itemcost: ItemInformations[indexPath.row].itemcost)
+            cartItemCell.setItemInfo(self.cartItems[indexPath.row])
             return cartItemCell
         }
         

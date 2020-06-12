@@ -9,7 +9,7 @@
 import UIKit
 import XLPagerTabStrip
 //import iOSDropDown
-
+/*
 class childViewController1: UIViewController, IndicatorInfoProvider{
 
     private var ItemInformations: [ItemInfo] = []
@@ -79,3 +79,4 @@ extension childViewController1: UITableViewDelegate{
     return 300
     }
 }
+*/
