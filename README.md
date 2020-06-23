@@ -78,15 +78,17 @@
 
    어떻게 해야할까요? 
 
-   <img src="./img/terminal1.png" align = "left" alt="terminal1" style="zoom:50%;" /> 일단 내 브랜치에서 뭔가 푸시한다~
+   <img src="./img/terminal1.png" align = "left" alt="terminal1" style="zoom:20%;" /> 일단 내 브랜치에서 뭔가 푸시한다~
 
-   <img src="./img/terminal2.png" align = "left" alt="terminal2" style="zoom:50%;" /> 마스터 브랜치로 이동한다~ 
+   <img src="./img/terminal2.png" align = "left" alt="terminal2" style="zoom:20%;" /> 마스터 브랜치로 이동한다~ 
 
-   <img src="./img/terminal4.png" align = "left" alt="terminal4" style="zoom:50%;" /> 마스터의 로컬 내용이 원격 저장소와 다르다면 pull 받는다~
+   <img src="./img/terminal4.png" align = "left" alt="terminal4" style="zoom:20%;" /> 마스터의 로컬 내용이 원격 저장소와 다르다면 pull 받는다~
 
-   <img src="./img/terminal5.png" align = "left" alt="terminal5" style="zoom:50%;" /> 마스터브랜치에서 예슬 브랜치 내용을 머지한다~
+   <img src="./img/terminal5.png" align = "left" alt="terminal5" style="zoom:20%;" /> 마스터브랜치에서 예슬 브랜치 내용을 머지한다~
 
-   <img src="./img/terminalPush.png" align = "left" alt="terminalPush" style="zoom:50%;" /> 원격저장소에 로컬에서 변경된 내용을 푸시해준다~
+   <img src="./img/terminalPush.png" align = "left" alt="terminalPush" style="zoom:20%;" /> 원격저장소에 로컬에서 변경된 내용을 푸시해준다~
+
+
 
    이와 같은 방법으로 내 브랜치에 업데이트된 마스터 브랜치를 가져와서 머지하고 싶다면,
 
