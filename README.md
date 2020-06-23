@@ -27,7 +27,50 @@
 
        생성된 코드를 아까 만든 .gitignore 파일 내용으로 복붙해주고 저장하면 끄읏~ 저는 vi에디터가 불편하기 때문에 파인더에서 그냥 텍스트편집기로 해요. 편할대로 하심 댑니다~!
 
-  - 팀원이 브랜치도 파고~ 플젝이 한창 진행중일 때~ 각자의 브랜치에서 push하면 master 브랜치에서 merge 해주면됩니당
+  - 팀원이 브랜치도 파고~ 플젝이 한창 진행중일 때~ 각자의 브랜치에서 push하면 master 브랜치에서 merge 해주면됩니당 master는 master에서 뻗어나간 각각의 브랜치에서 작업한 내용을 다시 하나씩 갖다 붙이는 곳이라고 생각하믄 되어요.
 
     1. 레포 원격저장소로 갑니다!
 
+       <img src="/Users/iyeseul/SOPT_local/Group8/img/pullRequest.png" alt="pullRequest" style="zoom:50%;" />
+
+    2. yeseullee 브랜치에서 푸쉬를 했다 ! 보이시죠? Compare & pull request 눌러주세영~
+
+       ![createPR](/Users/iyeseul/SOPT_local/Group8/img/createPR.png)
+
+       - Base: master <- Compare: yeseullee
+
+         Yeseullee 브랜치에서 변경된 내용을 master 브랜치로 머지하고 싶어요~ 이 뜻이에요.
+
+       - ​	Able to merge.
+
+         충돌 없이 잘 머지될거란 뜻입니당. 그럼 충돌이 나면 어떡하죠⁉️
+
+       자 그럼 create pull request 눌러주세요!
+
+       <img src="/Users/iyeseul/SOPT_local/Group8/img/newPR.png" alt="newPR" style="zoom:50%;" align="left" />
+
+       🔼 그럼 이렇게 pull requests에 1! 뜬 거 보이시쥬? 아주 좋아요👍
+
+       🔽 Pull requests를 눌러보면 이렇게 날아온 PR이 뜹니당. Merge pull request 해주면 마스터에 머지 끄읏~
+
+       ![merge](/Users/iyeseul/SOPT_local/Group8/img/merge.png)
+
+       또 한가지!! 만약 내 브랜치와 마스터 브랜치의 내용이 다를경우!! 마스터의 내용을 내 브랜치로 받아오고 싶다!!
+
+       그럼 일단 내 브랜치로 이동~
+
+       <img src="/Users/iyeseul/SOPT_local/Group8/img/branchCompare.png" alt="branchCompare" style="zoom:50%;" />
+
+       🔼 This branch is 1 commit behind master. 보이시져? 그리고 오른쪽에 pull request, compare 아무거나 눌러바여~
+
+       <img src="/Users/iyeseul/SOPT_local/Group8/img/nothing.png" alt="nothing" style="zoom:50%;" />
+
+       오잉? 비교할게 없다고 뜨져?! 여기서 그럼 base랑 compare를 서로 바꿔볼게요
+
+       <img src="/Users/iyeseul/SOPT_local/Group8/img/br-pr.png" alt="br-pr" style="zoom:50%;" />
+
+       그럼 이렇게! 또 pr을 생성할 수 있게 뜹니당 똑같이 pr 날리고 merge 해주면 끝~
+
+       이걸 원격이 아닌 로컬에서 터미널로 하고싶다❓
+
+       
