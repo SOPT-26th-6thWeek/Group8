@@ -13,7 +13,7 @@
 
     3. Xcode에서 프로젝트를 만들어주세요.
 
-    4. 필요에 따라 폴더링, pod init, podfile 수정, pod install, info.plist 수정, Assets 다운, **.gitignore 설정** 등등.. 초기 셋팅을 모두 마쳐주세요! 
+    4. 필요에 따라 폴더링, pod init, podfile 수정, pod install, info.plist 수정, Assets 다운, **.gitignore 설정** 등등.. 초기 셋팅을 모두 마치고 push 해주세요!
 
        [^.gitignore란?]: 저장소에 업로드하지 않을 파일의 규칙을 정의하는 파일
 
@@ -23,8 +23,10 @@
 
        [gitignore.io 접속](https://www.toptal.com/developers/gitignore) → 아래와 같이 원하는 키워드를 넣어주고 생성을 누릅니당.
 
-       <img src="/Users/iyeseul/SOPT_local/Group8/img/ignore.png" alt="ignore" style="zoom:40%;" />
+       만약에 여기 키워드에 cocoapods 을 추가한다? 그러면 푸쉬할때 pod 빼고 올라가고 그렁거예요.
 
+       <img src="/Users/iyeseul/SOPT_local/Group8/img/ignore.png" alt="ignore" style="zoom:40%;" />
+     
        생성된 코드를 아까 만든 .gitignore 파일 내용으로 복붙해주고 저장하면 끄읏~ 저는 vi에디터가 불편하기 때문에 파인더에서 그냥 텍스트편집기로 해요. 편할대로 하심 댑니다~!
 
   - 팀원이 브랜치도 파고~ 플젝이 한창 진행중일 때~ 각자의 브랜치에서 push하면 master 브랜치에서 merge 해주면됩니당 master는 master에서 뻗어나간 각각의 브랜치에서 작업한 내용을 다시 하나씩 갖다 붙이는 곳이라고 생각하믄 되어요.
@@ -72,5 +74,17 @@
        그럼 이렇게! 또 pr을 생성할 수 있게 뜹니당 똑같이 pr 날리고 merge 해주면 끝~
 
        이걸 원격이 아닌 로컬에서 터미널로 하고싶다❓
-
+  
+       어떻게 해야할까요? 
        
+       <img src="/Users/iyeseul/SOPT_local/Group8/img/terminal1.png" align = "left" alt="terminal1" style="zoom:50%;" /> 일단 내 브랜치에서 뭔가 푸시한다~
+       
+       <img src="/Users/iyeseul/SOPT_local/Group8/img/terminal2.png" align = "left" alt="terminal2" style="zoom:50%;" /> 마스터 브랜치로 이동한다~ 
+       
+       <img src="/Users/iyeseul/SOPT_local/Group8/img/terminal4.png" align = "left" alt="terminal4" style="zoom:50%;" /> 마스터의 로컬 내용이 원격 저장소와 다르다면 pull 받는다~
+       
+       <img src="/Users/iyeseul/SOPT_local/Group8/img/terminal5.png" align = "left" alt="terminal5" style="zoom:50%;" /> 마스터브랜치에서 예슬 브랜치 내용을 머지한다~
+       
+       <img src="/Users/iyeseul/SOPT_local/Group8/img/terminal6.png" align = "left" alt="terminal6" style="zoom:50%;" />
+       
+       <img src="/Users/iyeseul/SOPT_local/Group8/img/terminal7.png" align = "left" alt="terminal7" style="zoom:50%;" />
