@@ -78,27 +78,24 @@
 
    어떻게 해야할까요? 
 
-   <img src="./img/terminal1.png" align = "left" alt="terminal1" style="zoom:20%;" /> 일단 내 브랜치에서 뭔가 푸시한다~
+1. yeseullee: git push 👉  일단 내 브랜치에서 뭔가 푸시한다~
 
-   <img src="./img/terminal2.png" align = "left" alt="terminal2" style="zoom:20%;" /> 마스터 브랜치로 이동한다~ 
+2. yeseullee: git checkout master 👉  마스터 브랜치로 이동한다~ 
 
-   <img src="./img/terminal4.png" align = "left" alt="terminal4" style="zoom:20%;" /> 마스터의 로컬 내용이 원격 저장소와 다르다면 pull 받는다~
+3. master: git pull origin master 👉  마스터의 로컬 내용이 원격 저장소와 다르다면 pull 받는다~
 
-   <img src="./img/terminal5.png" align = "left" alt="terminal5" style="zoom:20%;" /> 마스터브랜치에서 예슬 브랜치 내용을 머지한다~
-
-   <img src="./img/terminalPush.png" align = "left" alt="terminalPush" style="zoom:20%;" /> 원격저장소에 로컬에서 변경된 내용을 푸시해준다~
-
-
+4. master: git merge yeseullee 👉  마스터브랜치에서 예슬 브랜치 내용을 머지한다~
+5. master: git push 👉  원격에 로컬에서 변경된 내용을 푸시해준다~
 
    이와 같은 방법으로 내 브랜치에 업데이트된 마스터 브랜치를 가져와서 머지하고 싶다면,
 
-   일단 자기 브랜치에서 하던 작업을 모두 commit 해주세요! 그 담에 하는 거예여~
+   일단 자기 브랜치에서 하던 작업을 모두 꼭! commit 해주세요! 
 
-   master 브랜치에서 git pull origin master 해서 마스터 브랜치 내용을 받아온 다음
+   master 브랜치에서 git pull origin master 해서 마스터 브랜치 내용을 받아온 다음,
 
-   <img src="./img/terminal6.png" align = "left" alt="terminal6" style="zoom:50%;" /> 예슬 브랜치로 간다~
+1. master: git checkout yeseullee 👉예슬 브랜치로 간다~
 
-   <img src="./img/terminal7.png" align = "left" alt="terminal7" style="zoom:50%;" /> 내 브랜치와 마스터 브랜치를 머지해준다~
+2. yeseullee: git merge master 👉 내 브랜치와 마스터 브랜치를 머지해준다~
 
    똑같이 원격에 푸시해준다~~
 
