@@ -13,7 +13,7 @@
 
     3. Xcode에서 프로젝트를 만들어주세요.
 
-    4. 필요에 따라 폴더링, pod init, podfile 수정, pod install, info.plist 수정, **Assets 다운**, **.gitignore 설정** 등등.. 초기 셋팅을 모두 마치고 push 해주세요! 
+    4. 필요에 따라 폴더링, pod init, podfile 수정, pod install, info.plist 수정, **Assets 다운**, **.gitignore 설정** 등등.. 초기 셋팅을 모두 마치고 push 해주세요! 이후에 같은 파일을 둘 다 수정하면 충돌나는거예여 주의주의‼️
 
        [^.gitignore란?]: 저장소에 업로드하지 않을 파일의 규칙을 정의하는 파일
 
