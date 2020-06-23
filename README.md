@@ -36,7 +36,7 @@
 
 <img src="./img/pullRequest.png" alt="pullRequest" style="zoom:50%;" />
 
-​	2. yeseullee 브랜치에서 푸쉬를 했다 ! 보이시죠? Compare & pull request 눌러주세영~
+​				2. yeseullee 브랜치에서 푸쉬를 했다 ! 보이시죠? Compare & pull request 눌러주세영~
 
 ![createPR](./img/createPR.png)
 
@@ -46,15 +46,15 @@
 
    - ​	Able to merge.
 
-     ###### 충돌 없이 잘 머지될거란 뜻입니당.  그럼 충돌이 나면 어떡하죠⁉️
+     > 충돌 없이 잘 머지될거란 뜻입니당.  그럼 충돌이 나면 어떡하죠⁉️ 
 
    자 그럼 create pull request 눌러주세요!
 
 <img src="./img/newPR.png" alt="newPR" style="zoom:50%;" align="left" />
 
-   🔼 그럼 이렇게 pull requests에 1! 뜬 거 보이시쥬? 아주 좋아요👍
+ 🔼 그럼 이렇게 pull requests에 1! 뜬 거 보이시쥬? 아주 좋아요👍
 
-   🔽 Pull requests를 눌러보면 이렇게 날아온 PR이 뜹니당. Merge pull request 해주면 마스터에 머지 끄읏~
+ 🔽 Pull requests를 눌러보면 이렇게 날아온 PR이 뜹니당. Merge pull request 해주면 마스터에 머지 끄읏~
 
 ![merge](./img/merge.png)
 
@@ -87,7 +87,9 @@
 4. master: git merge yeseullee 👉  마스터브랜치에서 예슬 브랜치 내용을 머지한다~
 5. master: git push 👉  원격에 로컬에서 변경된 내용을 푸시해준다~
 
-   이와 같은 방법으로 내 브랜치에 업데이트된 마스터 브랜치를 가져와서 머지하고 싶다면,
+<hr>
+
+   이와 같은 방법으로 내 브랜치에 업데이트된 마스터 브랜치(master -> mybranch)를 가져와서 머지하고 싶다면,
 
    일단 자기 브랜치에서 하던 작업을 모두 꼭! commit 해주세요! 
 
@@ -101,7 +103,7 @@
 
    너무 쉽죠??? ㅋㅋㅋㅋ (?)
 
-   ###### 충돌이 나도 해결할 수 있숴요. 고것은 2편에서 투비컨티뉴....
+> 충돌이 나도 해결할 수 있숴요. 고것은 2편에서 투비컨티뉴....
 
 
 ​       
