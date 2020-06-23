@@ -1,7 +1,7 @@
 # Group8
 ##### 🤓 깃초보 예슬이가 알려주는 깃 사용법
 
-- 마스터시점 : 
+- 관리자시점 : 
 
   - 초기 setting이 필요해요!
 
@@ -13,7 +13,7 @@
 
     3. Xcode에서 프로젝트를 만들어주세요.
 
-    4. 필요에 따라 폴더링, pod init, podfile 수정, pod install, info.plist 수정, Assets 다운, **.gitignore 설정** 등등.. 초기 셋팅을 모두 마치고 push 해주세요!
+    4. 필요에 따라 폴더링, pod init, podfile 수정, pod install, info.plist 수정, **Assets 다운**, **.gitignore 설정** 등등.. 초기 셋팅을 모두 마치고 push 해주세요! 
 
        [^.gitignore란?]: 저장소에 업로드하지 않을 파일의 규칙을 정의하는 파일
 
@@ -26,7 +26,7 @@
        만약에 여기 키워드에 cocoapods 을 추가한다? 그러면 푸쉬할때 pod 빼고 올라가고 그렁거예요.
 
        <img src="/Users/iyeseul/SOPT_local/Group8/img/ignore.png" alt="ignore" style="zoom:40%;" />
-     
+    
        생성된 코드를 아까 만든 .gitignore 파일 내용으로 복붙해주고 저장하면 끄읏~ 저는 vi에디터가 불편하기 때문에 파인더에서 그냥 텍스트편집기로 해요. 편할대로 하심 댑니다~!
 
   - 팀원이 브랜치도 파고~ 플젝이 한창 진행중일 때~ 각자의 브랜치에서 push하면 master 브랜치에서 merge 해주면됩니당 master는 master에서 뻗어나간 각각의 브랜치에서 작업한 내용을 다시 하나씩 갖다 붙이는 곳이라고 생각하믄 되어요.
@@ -45,7 +45,7 @@
 
        - ​	Able to merge.
 
-         충돌 없이 잘 머지될거란 뜻입니당. 그럼 충돌이 나면 어떡하죠⁉️
+         ###### 충돌 없이 잘 머지될거란 뜻입니당.  그럼 충돌이 나면 어떡하죠⁉️
 
        자 그럼 create pull request 눌러주세요!
 
@@ -85,6 +85,22 @@
        
        <img src="/Users/iyeseul/SOPT_local/Group8/img/terminal5.png" align = "left" alt="terminal5" style="zoom:50%;" /> 마스터브랜치에서 예슬 브랜치 내용을 머지한다~
        
-       <img src="/Users/iyeseul/SOPT_local/Group8/img/terminal6.png" align = "left" alt="terminal6" style="zoom:50%;" />
+       <img src="/Users/iyeseul/SOPT_local/Group8/img/terminalPush.png" align = "left" alt="terminalPush" style="zoom:50%;" /> 원격저장소에 로컬에서 변경된 내용을 푸시해준다~
        
-       <img src="/Users/iyeseul/SOPT_local/Group8/img/terminal7.png" align = "left" alt="terminal7" style="zoom:50%;" />
+       이와 같은 방법으로 내 브랜치에 업데이트된 마스터 브랜치를 가져와서 머지하고 싶다면,
+       
+       일단 자기 브랜치에서 하던 작업을 모두 commit 해주세요! 그 담에 하는 거예여~
+       
+       master 브랜치에서 git pull origin master 해서 마스터 브랜치 내용을 받아온 다음
+       
+       <img src="/Users/iyeseul/SOPT_local/Group8/img/terminal6.png" align = "left" alt="terminal6" style="zoom:50%;" /> 예슬 브랜치로 간다~
+       
+       <img src="/Users/iyeseul/SOPT_local/Group8/img/terminal7.png" align = "left" alt="terminal7" style="zoom:50%;" /> 내 브랜치와 마스터 브랜치를 머지해준다~
+       
+       똑같이 원격에 푸시해준다~~
+       
+       너무 쉽죠??? ㅋㅋㅋㅋ (?)
+       
+       ###### 충돌이 나도 해결할 수 있숴요. 고것은 2편에서 투비컨티뉴....
+       
+       
