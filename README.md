@@ -50,9 +50,7 @@
 
    자 그럼 create pull request 눌러주세요!
 
-<img src="./img/newPR.png" alt="newPR" style="zoom:50%;" align="left" />
-
-
+<img src="./img/newPR.png" alt="newPR" style="zoom:50%;" />
 
  🔼 그럼 이렇게 pull requests에 1! 뜬 거 보이시쥬? 아주 좋아요👍
 
