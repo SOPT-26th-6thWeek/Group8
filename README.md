@@ -52,6 +52,8 @@
 
 <img src="./img/newPR.png" alt="newPR" style="zoom:50%;" align="left" />
 
+
+
  🔼 그럼 이렇게 pull requests에 1! 뜬 거 보이시쥬? 아주 좋아요👍
 
  🔽 Pull requests를 눌러보면 이렇게 날아온 PR이 뜹니당. Merge pull request 해주면 마스터에 머지 끄읏~
